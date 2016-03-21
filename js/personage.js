@@ -97,45 +97,49 @@
 			calls_r(oCall_vx);
 		});
 		
-		startMove(oShade,{
-			"top":0,
-		},{
-			complete:function(){
-				startMove(oShade_l,{
-					"left":-oShade.offsetWidth/2,
-					'opacity':0
-				},{
-					complete:function(){
-						oShade.style.display = 'none';
-					},
-					duration:2000
-				});
-				startMove(oShade_r,{
-					"right":-oShade.offsetWidth/2,
-					'opacity':0
-				},{
-					duration:2000
-				});
-				startMove(oShade,{
-					'opacity':0
-				},{
-					duration:2000
-				});
-				setTimeout(function(){
-					startMove(oIntros_l,{
-						'top':0
+		setTimeout(function(){
+			startMove(oShade,{
+				"top":0,
+			},{
+				complete:function(){
+					startMove(oShade_l,{
+						"left":-oShade.offsetWidth/2,
+						'opacity':0
 					},{
-						duration:1800
+						complete:function(){
+							oShade.style.display = 'none';
+						},
+						duration:2000
 					});
-					startMove(oIntros_r,{
-						'bottom':0
+					startMove(oShade_r,{
+						"right":-oShade.offsetWidth/2,
+						'opacity':0
 					},{
-						duration:1800
+						duration:2000
 					});
-				},1100);
-			},
-			duration:900
-		});
+					startMove(oShade,{
+						'opacity':0
+					},{
+						duration:2000
+					});
+					setTimeout(function(){
+						startMove(oIntros_l,{
+							'top':0
+						},{
+							duration:1800
+						});
+						startMove(oIntros_r,{
+							'bottom':0
+						},{
+							duration:1800
+						});
+					},1100);
+				},
+				duration:900
+			});	
+		},1000);
+		
+		
 
 
 	});
