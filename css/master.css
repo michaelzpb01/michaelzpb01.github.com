@@ -12,24 +12,31 @@ html,body{
 	width: 100%;
 	overflow: hidden;
 	min-width: 1300px;
+	min-height: 700px;
+}
+.page .page_f .bg{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+.page .page_f .content{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 5;
 }
 .page .bg img{
 	width: 100%;
 	height: 100%;
 }
-.page div{
+.page .page_f{
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-}
-.page_s{
-	background: yellowgreen;
-}
-.page_t{
-	background: green;
-}
-.page_forth{
-	background: red;
+	position: relative;
 }
 .btn{
 	position: absolute;
@@ -40,8 +47,47 @@ html,body{
 	margin-right: -15px;
 	background: rgba(0,0,0,0.7);
 	margin-top: -138px;
-	z-index: 3;
+	z-index: 1999;
 	border-radius: 15px;
+}
+.btn .call a{
+	color: #0AD7B3;
+	position: absolute;
+	top: 80px;
+	left: 4px;
+}
+.btn .call i{
+	position: absolute;
+	width: 29px;
+	height: 30px;
+	background: url(../images/icons.png) no-repeat;
+	top: 30px;
+	left: 95px;
+}
+.btn .call{
+	width: 200px;
+	height: 150px;
+	background: #000;
+	opacity: 0.7;
+	position: absolute;
+	left: 60px;
+	top: 60px;
+	border-radius: 20px 0 0 20px;
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+	font-family: "微软雅黑";
+	position: absolute;
+	overflow: hidden;
+}
+.btn .vx img{
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -60px;
+	margin-left: -60px;
 }
 .btn .QQ{
 	width: 24px;

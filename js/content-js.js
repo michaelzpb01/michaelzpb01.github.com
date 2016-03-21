@@ -9,6 +9,8 @@ addReady(function(){
 		var aLi = oNav.getElementsByTagName('li');
 		var oHeaderBar = document.getElementById('header_bar');
 		var oTelephone = document.getElementById('telephone');
+		
+		
 		var aPage_c = oPage.children;
 		var iNum = 0;
 		var bOk = false;
@@ -21,7 +23,7 @@ addReady(function(){
 				"marginTop":-iNum*oPage.offsetHeight,
 			},{
 				complete:function(){
-					bOk = false;
+					bOk = false
 				},
 				duration:300
 			});
@@ -57,13 +59,12 @@ addReady(function(){
 				"marginTop":-iNum*oPage.offsetHeight,
 			},{
 				complete:function(){
-					bOk = false;
+					bOk = false
 				},
 				duration:300
 			});
 			clear();
 			wellbar();
-			
 		}
 		
 		function prev(){
@@ -132,5 +133,14 @@ addReady(function(){
 				
 			})(i);
 		}
+		document.onkeydown = function(ev){
+			if(ev.keyCode == 38||ev.keyCode == 37){
+				prev();
+			}else if(ev.keyCode == 40||ev.keyCode == 39){
+				next();
+			}
+		};
+		
+		
 	})();
 });

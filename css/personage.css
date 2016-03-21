@@ -45,13 +45,13 @@
 	font-size: 18px;
 	font-family: "microsoft yahei";
 }
-.header .telephone{
+.telephone{
 	position: absolute;
 	width: 300px;
 	right: 0;
 	height: 100%;
 }
-.header .telephone span{
+.telephone span{
 	position: absolute;
 	left: 20px;
 	top: 25px;
@@ -59,7 +59,7 @@
 	height: 30px;
 	background: url(../images/icons.png) no-repeat;
 }
-.header .telephone .contact{
+.telephone .contact{
 	color: #0ad7b3;
 	font-size: 28px;
 	font-weight: bold;
@@ -67,6 +67,72 @@
 	left: 60px;
 	line-height: 78px;
 }
+
+.shade{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	background: #000;
+	opacity: 0.6;
+	left: 0;
+	top: -1400px;
+}
+.shade div{
+	overflow: hidden;
+}
+.shade .shade_l{
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	z-index: 10000;
+	background: rgba(0,0,0,0.5);
+	left: 0;
+	top: 0;
+}
+.shade img{
+	width: 443px;
+	height: 220px;
+}
+.shade .shade_l img{
+	position: absolute;
+	right: -221px;
+	top: 50%;
+	margin-top: -110px;
+}
+.shade .shade_r img{
+	position: absolute;
+	left: -223px;
+	top: 50%;
+	margin-top: -110px;
+}
+.shade .shade_r{
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	z-index: 10000;
+	background: rgba(0,0,0,0.5);
+	right: 0;
+	top: 0;
+}
+
+.intros .intros_l,.intros .intros_r{
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	padding-top: 78px;
+}
+.intros .intros_l{
+	left: 0;
+	top: -1000px;
+	background: rgba(23,31,37,0.5);
+}
+.intros .intros_r{
+	right: 0;
+	bottom: -1000px;
+}
+
+
 
 
 
