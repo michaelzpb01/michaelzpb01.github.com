@@ -111,17 +111,20 @@
 						},
 						duration:2000
 					});
+					
 					startMove(oShade_r,{
 						"right":-oShade.offsetWidth/2,
 						'opacity':0
 					},{
 						duration:2000
 					});
+					
 					startMove(oShade,{
 						'opacity':0
 					},{
 						duration:2000
 					});
+					
 					setTimeout(function(){
 						startMove(oIntros_l,{
 							'top':0
@@ -134,10 +137,11 @@
 							duration:1800
 						});
 					},1100);
+					
 				},
 				duration:900
 			});	
-		},1000);
+		},500);
 		
 		
 

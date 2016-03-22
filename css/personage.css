@@ -121,6 +121,7 @@
 	height: 100%;
 	position: absolute;
 	padding-top: 78px;
+	overflow: hidden;
 }
 .intros .intros_l{
 	left: 0;
@@ -131,6 +132,45 @@
 	right: 0;
 	bottom: -1000px;
 }
+
+
+
+/*首页内容开始*/
+
+.username{
+	font-size: 50px;
+	position: absolute;
+	top: 150px;
+	right: 270px;
+	font-weight: bold;
+	color: #0ad7b3;
+	letter-spacing: 10px;
+}
+.intros_l_message{
+	position: absolute;
+	top: 230px;
+	right: 130px;
+	color: #0ad7b3;
+	font-size: 24px;
+	line-height: 60px;
+}
+.intros_r .intros_l_message{
+	top: 308px;
+	left: 130px;
+}
+
+/*首页内容结束*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
