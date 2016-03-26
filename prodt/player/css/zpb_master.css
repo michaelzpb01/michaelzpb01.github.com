@@ -1,0 +1,164 @@
+body {
+	background: #282828;
+}
+
+.zpb_play {
+	min-width: 1026px;
+	width: 1026px;
+	height: 888px;
+	border: 1px solid #000;
+	margin: 0 auto;
+	min-width: 1026px;
+}
+
+.zpb_player {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #353537;
+}
+
+.zpb_header img {
+	width: 100%;
+}
+
+.zpb_footer img {
+	width: 100%;
+}
+
+.zpb_content {
+	position: relative;
+	overflow: hidden;
+}
+
+.zpb_list {
+	width: 238px;
+	background: #ccc;
+	height: 820px;
+	overflow: hidden;
+}
+
+.zpb_page {
+	width: 786px;
+	height: 820px;
+	background: yellow;
+	overflow: hidden;
+	position: relative;
+}
+
+.zpb_list_message {
+	width: 237px;
+	height: 125px;
+	background: pink;
+}
+
+.zpb_list_sel_l span,
+.zpb_list_sel_r span {
+	width: 13px;
+	height: 11px;
+	display: inline-block;
+	background: #000;
+	cursor: pointer;
+}
+
+.zpb_list_sel_r,
+.zpb_list_sel_l {
+	width: 13px;
+	height: 100%;
+	background: red;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 10;
+	border: 1px solid #000;
+}
+.zpb_gdt{
+	height: 444px;
+}
+.zpb_list_sel_r .zpb_t,
+.zpb_list_sel_l .zpb_t {
+	background: url(../images/rollBarUp_bg.png) no-repeat;
+	border-bottom: 1px solid #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.zpb_list_sel_r .zpb_b,
+.zpb_list_sel_l .zpb_b {
+	background: url(../images/rollBarDown_bg.png) no-repeat;
+	border-bottom: 1px solid #000;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-top: 1px solid #000;
+}
+
+.zpb_list_news {
+	background: #000;
+	height: 694px;
+	position: relative;
+}
+
+.zpb_list_count {
+	overflow: hidden;
+	width: 223px;
+	background: #CCCCCC;
+	height: 694px;
+	position: relative;
+}
+
+.zpb_list_matter {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.zpb_list_matter {
+	overflow: hidden;
+}
+
+.zpb_bar {
+	width: 100%;
+	height: 400px;
+	background: #403e3f;
+	position: absolute;
+	top: 0px;
+	left: 0;
+}
+
+
+/*滚动测试开始*/
+
+.zpb_list_matter {
+	color: #000;
+}
+
+.zpb_list_bar {
+	width: 100%;
+	height: 100%;
+	background: #0a0a0a;
+	position: absolute;
+	top: 12px;
+	left: 0;
+}
+.zpb_list_bar .zpb_bar{
+	height: 329px;
+}
+.zpb_god{
+	height: 419px;
+}
+.count_r {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.zpb_bar {
+	cursor: pointer;
+}
+
+.zpb_page .zpb_list_bar {
+	height: 795px;
+}
+/*滚动测试结束*/
+

@@ -1,0 +1,9 @@
+.clearFix:after {                  /* Çå³ý¸¡¶¯*/
+    content:'';
+    display:block;
+    clear:both;
+}
+
+.clearFix{
+    zoom : 1 ;   /*¼æÈÝIe 6 7*/
+}

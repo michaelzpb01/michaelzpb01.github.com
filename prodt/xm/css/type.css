@@ -1,0 +1,35 @@
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	
+}
+.clearFix:after{
+	content: '';display: block;clear:both;
+}
+.clearFix{
+	zoom: 1;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.wrapper{
+	width: 930px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+img{
+	display: block;	
+	border: none;
+}
+input{
+	outline:none;
+}

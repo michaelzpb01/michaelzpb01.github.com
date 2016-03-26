@@ -1,0 +1,352 @@
+.all{
+    width: 1180px;
+    min-width: 1180px;
+    height: 3804px;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+}
+.header{
+    width: 1180px;
+    margin: 0 auto;
+    height: 1547px;
+    /*background: #00ccff;*/
+}
+.header_top{
+    width: 1180px;
+    height: 122px;
+    border-bottom: 3px solid #e1e1e1;
+}
+
+.header_top_nva{
+    width: 1180px;
+    height: 37px;
+    line-height: 37px;
+    background: #2b2b2b;
+}
+
+.header_top_nva_div1{
+    width: 189px;
+    height: 37px;
+    line-height: 37px;
+    float: left;
+}
+.header_top_nva_div1_span1{
+    height: 37px;
+    width: 22px;
+    float: left;
+    background: url("../images/weibo.png") no-repeat left center;
+    margin: 0 13px 0 0;
+}
+.header_top_nva_div1_span2{
+    height: 37px;
+    width: 20px;
+    float: left;
+    background: url("../images/fenxiang.png") no-repeat left center;
+}
+.header_top_nva_div1 b{
+    height: 37px;
+    color: #00925f;
+    margin: 0 0 0 19px;
+    float: left;
+}
+
+.header_top_nva_ul{
+    width: 399px;
+    height: 37px;
+    background: #2b2b2b;
+    float: right;
+}
+
+.header_top_nva_ul li{
+    float: left;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    padding: 0 15px;
+    font-size: 12px;
+    color: #b2b2b2;
+    background: #2b2b2b;
+    border-right: 1px solid #474747;
+    margin: 10px 0 0 0;
+}
+
+.header_top_nva_ul li.car{
+    background: url("../images/gouwuche.png") no-repeat 15px center;
+    padding: 0 42px;
+}
+
+.header_top_nva_ul li a{
+    color: #b2b2b2;
+}
+
+.header_top_bottom img{
+    float: left;
+}
+
+.header_top_bottom_ul{
+    float: right;
+    width: 591px;
+    height: 85px;
+    line-height: 85px;
+    color: #2b2b2b;
+    font-size: 12px;
+    background: #ffffff;
+
+}
+.header_top_bottom_ul li{
+    float: left;
+    padding: 0 40px 0 0;
+    font-weight: bold;
+}
+
+.header_top_bottom_ul li a{
+    color: #2b2b2b;
+}
+
+li.header_top_bottom_ul_li{
+    padding: 0 40px 0 0 ;
+    margin: 0 0 0 8px;
+}
+
+.header_center{
+    width: 1180px;
+    height: 617px;
+    background: #0dad51;
+}
+
+.header_bottom{
+    width: 1180px;
+    height: 853px;
+    background: url("../images/bg.png") no-repeat;
+    overflow: hidden;
+}
+.header_bottom_ul{
+    width: 1220px;
+    float: left;
+}
+.header_bottom_ul li{
+    height: 561px;
+    width: 290px;
+    float: left;
+    margin: 171px 10px 0 0;
+    border-bottom: 5px solid #dfdfdf;
+}
+
+.header_bottom_ul li h5{
+    text-align: center;
+    font-size: 17px;
+    margin: 28px 0 0 0;
+}
+
+.header_bottom_ul li p{
+    text-align: center;
+    font-size: 12px;
+    color: #b4b4bb;
+    margin: 15px 0 0 0;
+}
+
+.header_bottom_ul li span{
+    display: block;
+    text-align: center;
+    color: #00925f;
+    font-size: 12px;
+    margin: 15px 0 0 0;
+    vertical-align: top;
+}
+
+.header_bottom_ul li span a{
+    color: #00925f;
+    font-size: 12px;
+    display: inline-block;
+    margin: 0 0 0 10px;
+}
+
+.header_bottom_ul li span a i{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    line-height: 13px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    background: #00925f;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    color: #f2f2f2;
+    font-style: normal;
+    margin: 0 0 0 10px;
+}
+
+.content_one{
+    background: url("../images/jingxuna.png") no-repeat;
+    width: 1180px;
+    height: 1071px;
+
+}
+
+.content_one_left{
+    width: 580px;
+    height: 875px;
+    /*background: #000;*/
+    float: left;
+    margin: 140px 0 0 0;
+}
+.content_one_left_top{
+    height: 575px;
+    width: 580px;
+    /*background: #cccccc;*/
+}
+.content_one_left_top_left{
+    height: 575px;
+    width: 280px;
+    background: white;
+    border-bottom:5px solid #e1e1e1;
+    float: left;
+}
+
+.content_one_left_top_left span{
+    display: block;
+    text-align: center;
+    color: #9b9b9b;
+}
+
+.content_one_left_top_left p{
+    text-align: center;
+    color: #565656;
+    font-size: 21px;
+}
+
+.content_one_left_top_left i{
+    font-style: normal;
+    display: block;
+    text-align: center;
+    color: #009860;
+}
+
+.content_one_left_top_right{
+    height: 575px;
+    width: 280px;
+    /*background: #350747;*/
+    border-bottom:5px solid #e1e1e1;
+    float: right;
+}
+
+.content_one_left_top_right_top{
+    width: 270px;
+    height: 270px;
+    border: 5px solid #eaeaea;
+}
+.content_one_left_top_right_bottom{
+    border-bottom: 5px solid #eaeaea;
+    margin: 20px 0 0;
+    width: 280px;
+    height: 270px;
+}
+
+.border_bottom{
+    border: 0;
+}
+
+.content_one_left_top_bottom{
+    margin: 20px 0 0 0;
+    float: left;
+    border-bottom: 5px solid #e1e1e1;
+    width:580px;
+    height: 270px;
+}
+
+.margin_top{
+    margin: 0;
+}
+
+.margin_top_one{
+    margin: 20px 0 0 0;
+}
+
+.content_one_right{
+    width: 580px;
+    height: 875px;
+    /*background: #000;*/
+    float: right;
+    margin: 140px 0 0 0;
+}
+
+.content_two{
+    background: url("../images/tansuo.jpg") no-repeat;
+    width: 1180px;
+    height: 750px;
+}
+
+.content_two_all{
+    width: 1180px;
+    height: 560px;
+    margin: 130px 0 0 0;
+    float: left;
+}
+
+.content_two_left{
+    width: 780px;
+    height: 560px;
+    float: left;
+}
+
+.content_two_right{
+    width: 380px;
+    height: 560px;
+    background: #ffffff;
+    float: right;
+    overflow: hidden;
+}
+
+.content_two_left_ul{
+    width: 800px;
+}
+
+.content_two_left_ul li{
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.content_two_right_btn span{
+    width: 190px;
+    height: 50px;
+    line-height: 50px;
+    background:#dadada;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    color: #a7a7a7;
+    cursor: pointer;
+    border-top: 2px solid transparent;
+}
+
+.content_two_right_btn span.active{
+    background: #fff;
+    border-top: 2px solid #00925f;
+}
+
+.content_two_right_ul li{
+    width: 320px;
+    height: 90px;
+    background: #f6f6f6;
+}
+
+.content_two_right_ul li{
+    margin: 15px 0 0 30px;
+}
+
+li.content_two_right_ul_li{
+    margin: 45px 0 0 30px;
+}
+
+.content_two_right_ul li img{
+    float: left;
+}
+.content_two_right_ul li p{
+    color: #838383;
+    width: 190px;
+    height: 30px;
+    margin: 18px 0 0 15px;
+    font-size: 12px;
+    float: left;
+}

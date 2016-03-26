@@ -1,0 +1,31 @@
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	
+}
+.clearFix:after{
+	content: '';display: block;clear:both;
+}
+.clearFix{
+	zoom: 1;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.wrapper{
+	width: 1180px;
+	margin: 0 auto;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+img{
+	display: block;	
+}
+

@@ -1,0 +1,52 @@
+.navigation-play{
+    width: 786px;
+    height: 38px;
+    background:#1c1d21;
+    overflow: hidden;
+}
+.navigation-play h2 {
+    width: 635px;
+    height: 100%;
+    line-height: 38px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff6ef;
+    float: left;
+}
+.play-icon{
+    width: 112px;
+    height: 38px;
+    float: left;
+    margin: 0 0 0 30px;
+}
+.play-icon li{
+    width: 18px;
+    height: 19px;
+    float: left;
+    margin: 10px 0 0 8px;
+}
+.toarrow,.stop,.ie,.tan{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.toarrow{
+    background: url("../images/toarrow.png") no-repeat;
+}
+.stop{
+    background: url("../images/stop.png") no-repeat;
+}
+.ie{
+    background: url("../images/ie.png") no-repeat;
+}
+.tan{
+    background: url("../images/tan.png") no-repeat;
+}
+.player-show{
+    width: 100%;
+    height: 535px;
+}
+.player-show embed{
+    width: 100%;
+    height: 535px;
+}

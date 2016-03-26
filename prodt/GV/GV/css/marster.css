@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+.nav{
+	min-width: 1016px;
+	height:85px;
+	border-bottom:1px dotted #d9d9d9;
+	background:#fff;
+}
+.header h1 a{
+	background:url(../image/1.png) no-repeat;
+	width:62px;
+	height:38px;
+	display: block;
+	margin-top:21px;
+	margin-right:46px;
+}
+.header a.fl{
+	font-size:18px;
+	color:#3f4df1;
+	display: block;
+	font-weight:600;
+	margin-top:37px;
+	margin-right:51px;
+}
+.main div.left{
+	width:560px;
+}
+.main div.left h2{
+	font-size:58px;
+	margin-top:128px;
+	color:#000;
+}
+.main div.left p{
+	margin-top:40px;
+	cursor: pointer;
+}
+div.left a.buttom_left{
+	border:1px solid #5c68f3;
+	height:55px;
+	width:394px;
+	background:#5c68f3;
+	color:#fff;
+	display:block;
+	text-align: center;
+	font-size:25px;
+	line-height: 55px;
+	margin-top:48px;
+	border-radius: 15px;
+}
+.main .right{
+	position:relative;
+}
+.right img{
+	width:530px;
+	height:836px;
+	position:absolute;
+	top:-40px;
+	cursor: pointer;
+	opacity:0.8;
+	transition:all 1s linear;
+}
+.right img:hover{
+	transform:translate(40px,40px);
+}
+.nav1{
+	height:750px;
+	min-width: 1016px;
+	border-bottom:1px dotted #d9d9d9; 
+}
+.subnav{
+	margin-top:100px;
+}
+.subnav ul{
+	overflow: hidden;
+	width:800px;
+}
+.subnav li{
+	float: left;
+	margin-right:120px;
+	margin-bottom:50px;
+}
+.subnav li i.twitter{ /*margin-top:500px;*/ 
+display:inline-block; 
+font-size:30px; 
+/*transition:all 5s ease-in-out;*/
+}
+
+
+
+
+
+
+
+

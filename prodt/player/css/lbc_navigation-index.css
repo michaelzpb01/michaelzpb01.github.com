@@ -1,0 +1,80 @@
+.navigation{
+    width: 786px;
+    height: 38px;
+    background:#383735;
+    overflow: hidden;
+    position: fixed;    /*加入定位*/        /*2016.2.27.02:36*/
+    top: 39px;          /*加入定位*/        /*2016.2.27.02:36*/
+    z-index:10;         /*提升层级*/        /*2016.2.27.02:36*/
+}
+.seat{
+    width: 100%;        /*占位用*/         /*2016.2.27.02:36*/
+    height: 36px;       /*占位用*/         /*2016.2.27.02:36*/
+}
+.navigation-ul{
+    width: 48px;
+    height: 19px;
+    background: #000;
+    margin: 10px 0 0 8px;
+    float: left;
+}
+.navigation-ul li{
+    cursor: pointer;
+    float: left;
+}
+.arrow{
+    width: 20px;
+    height: 19px;
+    background: url("../images/arrow.png") no-repeat 0 0;
+}
+li.refresh{
+    width: 20px;
+    height: 19px;
+    background: url("../images/refresh.png") no-repeat 0 0 ;
+    float: right;
+}
+.navigation-list{
+    height: 19px;
+    float: left;
+    margin: 10px 0 0 20px;
+}
+.navigation-list li{
+    color: #9b9b99;
+    height: 19px;
+    float: left;
+    padding: 0 12px;
+    line-height: 19px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+}
+li.list-pic{
+    color: #f84540;
+    background: url("../images/pic.png") no-repeat  0;
+    text-shadow: 0 0 5px #000;
+}
+.input-zore{
+    width: 160px;
+    height: 22px;
+    background: #000;
+    float: left;
+    overflow: hidden;
+    margin: 8px 0 0 55px;
+    border-radius: 3px;
+    position: relative;
+}
+.input-zore input[type="text"]{
+    width: 160px;
+    height: 22px;
+    background: #292828;
+    color: #fff6ef;
+    padding: 0 0 0 5px;
+}
+.input-zore a{
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 16px;
+    height: 15px;
+    background: url("../images/amplification.png") no-repeat 0;
+}

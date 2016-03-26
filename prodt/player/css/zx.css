@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+
+.zx-movie{width:220px;
+height:335px;
+background:#000;
+}
+span.time{float:right;
+margin-right:5px;
+margin-top:4px;
+width:31px;
+height:18px;
+display:block;
+color:#8c8371;
+}
+.zx-movie-a{width:129px;
+	color:#c5e3fd;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	}
+.zx-movie-list{border-bottom:1px solid #282f39;
+	overflow:hidden;
+	}
+.zx-movie-list{width:218px;
+	height:126px;
+	border:1px solid #122948;
+	background:#0c1828;
+}
+.zx-movie a{background:url(../images/trainsparent.png) no-repeat 5px 7px;
+    float:left;
+    display: inline-block;
+    padding-left: 15px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 2px;
+    padding-right: 2px;
+    color: #c5e3fd;
+}
+.zx-movie-list a{width:34px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	border-left:1px solid #2e568a;
+	border-top:1px solid #2e568a;
+	background:#142c50;
+	color:#50b5f2;
+	float:left;
+	padding:0;
+	margin-left:7px;
+	margin-top:8px;
+	}
+
+.his-list .play{background:url(../images/replay.png) no-repeat right bottom;
+	float:right;
+	margin-right:5px;
+	width:16px;
+	height:15px;
+	text-indent:-9999px;
+	}
+.his-list a:hover{
+background:#069 url(../images/trainsparent.png) no-repeat 5px 7px;
+	}
+.zx-movie-list a:hover{color:#F00;}
+.zx-movie-a:hover{
+	background:#069 url(../images/trainsparent.png) no-repeat 5px 7px;
+	}
+
+.sxt_box5 div li a:hover{ background:#132d50 url(../images/icons/play_historyBg.png) no-repeat 0px 9px;padding-left: 10px;}
+
+
+
+
+
+
+

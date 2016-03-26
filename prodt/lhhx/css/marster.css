@@ -1,0 +1,688 @@
+.soul{
+	font-size: 12px;
+	min-width: 1007px;
+}
+.header{
+	height: 55px;
+	overflow: hidden;
+}
+.header_t{
+	background:url(../images/a8.png) repeat-x;
+	height: 50px;
+	line-height: 50px;
+}
+.header_b{
+	background: url(../images/a7.png) repeat-x;
+	height: 5px;
+}
+.header_ts .logo{
+	background: url(../images/a1.png) no-repeat;
+	width: 86px;
+	height: 36px;
+	margin:6px 13px 8px 18px;
+	text-indent: -999px;
+	border-right: 1px solid #cecece;
+	padding-right: 13px;
+}
+.header_ts ul.left .i1{
+	background: url(../images/a2.png) no-repeat;
+	width: 24px;
+	height: 24px;
+	margin:13px 6px 0 21px;
+}
+.header_ts ul.left .i2{
+	background: url(../images/a3.png) no-repeat;
+	width: 24px;
+	height: 24px;
+	margin:13px 6px 0 21px;
+}
+.header_ts ul.left .i3{
+	background: url(../images/a4.png) no-repeat;
+	width: 24px;
+	height: 24px;
+	margin:13px 6px 0 21px;
+}
+.header_ts ul.left{
+	border-right: 1px solid #ccc;
+	padding-right: 9px;
+}
+.header_ts ul.right span{
+	border: 4px solid transparent;
+	border-top: 4px solid #555;
+	margin:23px 0 0 5px;
+}
+.header_ts ul.right li{
+	padding: 0 13px 0 26px;
+	border-right: 1px solid #ccc;
+}
+/*--------------------------------顶部结束-------------------------------*/
+
+/*-------------------------------魔神天降部分--------------------------------*/
+.hot .big{
+	width: 1007px;
+	height: 551px;
+}
+.hot{
+	position: relative;
+}
+.hot .hot_t{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.hot .text_l{
+	background: url(../images/a9.png) no-repeat;
+	width: 35px;
+	height: 122px;	
+	text-align: center;
+	line-height: 202px;
+	position: absolute;
+	top: 230px;
+	left: 0;
+}
+.hot .text_l span{
+	display: inline-block;
+	width: 1em;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	line-height: 18px;
+}
+.hot_t .hot_logo{
+	background: url(../images/a6.png) no-repeat;
+	width: 186px;
+	height: 63px;
+	margin: 21px 0 0 7px;
+}
+.hot_t ul{
+	margin:37px 0 0 40px;
+}
+.hot_t ul li{
+	width: 7.1em;
+	text-align: center;
+}
+.hot_t ul a{
+	font-size: 16px;
+	color: #cfdbff;
+	font-weight: bold;
+}
+.hot_t ul p{
+	color: #8088ad;
+	line-height: 20px;
+}
+/*--------------------------------------------魔神天降部分完--------------*/
+.download{
+	background: url(../images/b2.jpg) no-repeat;
+	width: 1007px;
+	height: 986px;
+}
+.download_lt a{
+	text-indent: -9999px;
+}
+.download_lt .a1{
+	background: url(../images/b10.jpg) no-repeat;
+	width: 215px;
+	height: 110px;
+}
+.download_lt .a2{
+	background: url(../images/b10.jpg) no-repeat -215px 0;
+	width: 102px;
+	height: 110px;
+}
+.download_lt .a3{
+	background: url(../images/b10.jpg) no-repeat -317px 0;
+	width: 100px;
+	height: 110px;
+}
+.download_lt .a4{
+	background: url(../images/b10.jpg) no-repeat -417px 0;
+	width: 100px;
+	height: 110px;
+}
+.download_lt .a5{
+	background: url(../images/b10.jpg) no-repeat -517px 0;
+	width: 100px;
+	height: 110px;
+}
+.download_l{
+	margin-left: 4px;
+}
+.download_lb .btn span{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background:red;
+	margin: 5px;
+}
+.download_lb{
+	position: relative;
+	border: 1px solid #433b4f;
+	margin-top: -1px;
+}
+.download_lb .btn{
+	position: absolute;
+	top: 270px;
+	left: 500px;
+}
+.download_lb .btn .show{
+	background: green;
+}
+.download_rt{
+	background: url(../images/a10.png) no-repeat;
+	width: 361px;
+	height: 55px;
+	overflow: hidden;
+	margin:7px 0 0 13px;
+}
+.download_rt a{
+	color: #adb9e0;
+	line-height: 22px;
+}
+.download_rt a span{
+	color: red;
+}
+.download_rt ul{
+	padding: 6px 0 0 84px;
+}
+.download_rb{
+	height: 346px;
+	width: 381px;
+	border: 1px solid #433b4f;
+	margin: 4px 0 0 -1px;
+}
+.download_rbt{
+	background: url(../images/a11.png) repeat-x;
+	height: 41px;
+	line-height: 41px;
+	color: #adb9e0;
+}
+.download_rbtl{
+	text-indent: 5px;
+}
+.download_rbtl span{
+	color: red;
+	text-decoration: underline;
+}
+.download_rbtl i{
+	background: url(../images/a12.png) no-repeat;
+	height: 14px;
+	width: 14px;
+	margin: 13px 0 0 5px;	
+}
+.download_rbtr .s2{
+	background: url(../images/a13.png) no-repeat;
+	width: 26px;
+	height: 22px;
+}
+.download_rbtr .s3{
+	background: url(../images/a14.png) no-repeat;
+	width: 26px;
+	height: 22px;
+}
+.download_rbtr .s4{
+	background: url(../images/a15.png) no-repeat;
+	width: 26px;
+	height: 22px;
+}
+.download_rbtr .s2,.download_rbtr .s3,.download_rbtr .s4{
+	margin: 10px 8px;
+}
+.download_rbbt{
+	background: url(../images/a16.png) repeat-x;
+	height: 57px;
+}
+.download_rbbt ul{
+	width:383px ;
+	overflow:hidden;
+}
+.download_rbbt li{
+	width: 94px;
+	height: 57px;
+	text-align: center;
+	line-height: 55px;
+	color: #fff;
+	border-right: 1px solid #000;
+}
+.download_rbbt li.active{
+	width: 94px;
+	background: url(../images/b17.png) repeat-x;
+	height: 85px;
+	border: 1px solid #000;
+	border-bottom: none;
+	margin-left: -1px;
+}
+.download_rbbt{
+	height: 57px;
+	width: 381px;
+	overflow: hidden;
+}
+.download_rbbb{
+	background: #322e3f;
+	width: 381px;
+	height: 248px;
+}
+.download_rbbbt{
+	background: url(../images/b10.jpg) no-repeat 0 -378px;
+	display: inline-block;
+	width: 347px;
+	height: 34px;
+	margin: 17px 0 0 16px;
+	text-align: center;
+	line-height: 33px;
+	color: orangered;
+	font-weight: bold;
+}
+.download_rbbb ul{
+	margin-top: 5px;
+}
+.download_rbbb li a{
+	color: #9ca7ca;
+}
+.download_rbbb li{
+	text-indent: 24px;
+	width: 370px;
+	line-height: 26px;
+	color: #9ca7ca;
+}
+.download_rbbb i{
+	background: url(../images/a18.png) no-repeat;
+	height: 13px;
+	width: 13px;
+	margin-top: 7px;
+	margin-right: -20px;
+}
+/*--------------------------------游戏下载部分完---------------------------------*/
+
+.download .choose{
+	margin:32px 0 0 4px;
+}
+.choose ul{
+	width: 1100px;
+	overflow: hidden;
+}
+.choose li{
+	position: relative;
+	border: 1px solid #433b4f;
+	margin-right: 8px;
+}
+.choose li .text{
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: right;
+	margin:10px 15px 0 0;
+	margin-top: 20px;
+}
+.choose .text p{
+	line-height: 20px;
+	color: #f93d00;
+	font-weight: bold;
+}
+.choose .text h2{
+	color: #fff;
+	line-height: 30px;
+}
+.choose .text a{
+	display: inline-block;
+	width: 58px;
+	height: 18px;
+	text-align: center;
+	line-height: 18px;
+	color: #bbc9e6;
+	margin-top: 15px;
+	border: 1px solid #433b4f;
+}
+.vocation_lt a{
+	text-indent: -9999px;
+}
+.vocation_lt .a1{
+	background: url(../images/b10.jpg) no-repeat 0 -412px;
+	height: 59px;
+	width: 130px;
+}
+.vocation_lt .a2{
+	background: url(../images/b10.jpg) no-repeat -130px -412px;
+	height: 59px;
+	width: 131px;
+}
+.vocation_lt .a3{
+	background: url(../images/b10.jpg) no-repeat -261px -412px;
+	height: 59px;
+	width: 131px;
+}
+.vocation_lt .a4{
+	background: url(../images/b10.jpg) no-repeat -392px -412px;
+	height: 59px;
+	width: 131px;
+}
+.vocation_lt .a5{
+	background: url(../images/b10.jpg) no-repeat -523px -412px;
+	height: 59px;
+	width: 133px;
+}
+.vocation{
+	margin: 30px 0 0 4px;
+}
+.vocation_l{
+	width: 656px;
+	height: 346px;
+	border: 1px solid #433b4f;
+}
+.vocation_lt .active{
+	background: url(../images/b10.jpg) no-repeat -523px -471px;
+	height: 59px;
+	width: 133px;
+}
+.vocation_r{
+	margin-left: 20px;
+}
+.vocation_rt span{
+	background: url(../images/b10.jpg) no-repeat -628px 0;
+	width: 28px;
+	height: 31px;
+}
+.vocation_rt h2{
+	color: #f3ca90;
+	line-height: 30px;
+	margin-left: 15px;
+}
+.vocation_rc{
+	border: 1px solid #433b4f;
+	margin-top: 15px;
+	position: relative;
+}
+.vocation_rc .text h3{
+	color: #fff;
+}
+.vocation_rc .text p{
+	color:#a997c3;
+	font-weight: bold;
+}
+.vocation_rc .text{
+	width: 319px;
+	height: 36px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	line-height: 36px;
+}
+.vocation_rc .text .text_bg{
+	background: #000;
+	height: 36px;
+	width: 319px;
+	opacity: 0.3;
+}
+.vocation_rc .text .text_te{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.vocation_rc .text_te span{
+	background: url(../images/a21.png) no-repeat;
+	width: 15px;
+	height: 15px;
+	margin: 10px 5px 0 80px;
+}
+.vocation_rb li{
+	background: url(../images/b10.jpg) no-repeat 0 -530px;
+	width:319px;
+	height: 25px;
+	line-height: 25px;
+	text-indent: 25px;
+	color: #a6b2d8;
+	margin-bottom: 3px;
+}
+.vocation_rb li a{
+	color: #a6b2d8;
+}
+.vocation_rb li span{
+	margin-right: 8px;
+}
+.vocation_rb ul{
+	margin-top: 10px;
+}
+/*-----------------------职业介绍部分完---------------------------*/
+
+/*----------------------分类介绍-----------------------------*/
+
+.referral{
+	background: url(../images/bg.jpg);
+	height: 927px;
+}
+.referral_l{
+	width: 215px;
+	margin-left: 4px;
+	overflow: hidden;
+}
+.referral_lt{
+	width:213px;
+	height: 187px;
+	border: 1px solid #09060f;
+}
+.referral_ltt{
+	text-align: center;
+}
+.referral_ltt h3{
+	color: #f4cc91;
+	margin: 14px 0 4px 0;
+	
+}
+.referral_ltt span{
+	display: inline-block;
+	background: url(../images/a22.png) no-repeat;
+	height: 2px;
+	width: 192px;
+	margin-top:;
+}
+.referral_ltb a{
+	color: #9587ab;
+}
+.referral_ltb{
+	line-height: 25px;
+	text-indent: 15px;
+	margin-top: 20px;
+}
+.referral_ltb ul{
+	width: 100px;
+}
+.referral_lc{
+	margin-top: 23px;
+}
+.referral_lc span{
+	display: inline-block;
+	width: 205px;
+	height: 35px;
+	border: 5px solid #322b3c;
+	text-align: center;
+	line-height: 35px;
+	color: #a295b7;
+	font-size: 15px;
+}
+.referral_lc span i{
+	display: inline-block;
+	border: 4px solid transparent;
+	border-top:4px solid #a295b7 ;
+	margin-left: 5px;
+}
+/*-------------左部分完---------------------*/
+/*---------------右部分---------------------*/
+.referral_r{
+	width: 788px;
+}
+.referral_r .dag{
+	margin: 0 0 38px 20px;
+}
+.player_t i{
+	background: url(../images/b10.jpg) no-repeat -607px -349px;
+	width: 49px;
+	height: 31px;
+}
+.player_t h2{
+	color: #f3ca90;
+	line-height: 35px;
+}
+.player_bt{
+	margin-left: 1px;
+	height: 48px;
+}
+.player_bt span,.player_bt .gd{
+	width: 104px;
+	height: 46px;
+	color: #a295b7;
+	line-height: 45px;
+	text-align: center;
+	margin-left: -1px;
+}
+.player_bt span{
+	border: 1px solid #433b4f;
+}
+.player_bt span.active{
+	background: #322b3c;
+	z-index: 2;
+	border-bottom: 1px solid #322b3c;
+}
+.player_bt .gd i{
+	background: url(../images/a18.png) no-repeat;
+	width: 15px;
+	height: 15px;
+	margin: 16px 5px 0 20px;
+}
+.player_bb{
+	width: 422px;
+	height: 256px;
+	border: 1px solid #433b4f;
+	margin-top: -1px;
+	background: #322b3c;
+}
+.player_bb img{
+	border: 1px solid #433b4f;
+	margin: 23px 14px 0 15px;
+}
+.player_bb ul{
+	margin-top: 21px;
+}
+.player_bb li a{
+	line-height: 25px;
+	color: #9587ab;
+}
+.data_b{
+	width: 285px;
+	height: 303px;
+	border: 1px solid #4b3f5c;
+	padding:0 17px;
+}
+.data_b span{
+	width:70px;
+	height: 26px;
+	background: #594f67;
+	color: #fff;
+	text-align: center;
+	line-height: 26px;
+	margin-top: 17px;
+}
+.data_b li{
+	line-height: 58px;
+	border-bottom: 1px dashed #594f67;
+}
+.data_b i{
+	background: url(../images/a26.png) no-repeat;
+	width: 8px;
+	height: 10px;
+	margin-top: 24px;
+}
+.data_b li .a1{
+	margin-left: 48px;
+}
+.data_b b{
+	margin-right: 1px;
+	color: #4867ab;
+}
+.data_b li.skt{
+	border: none;
+}
+.data_b li a{
+	color: #9587ab;
+}
+.data_b .text{
+	width: 279px;
+	height: 39px;
+	border: 3px solid #4b3f5c;
+	text-align: center;
+	line-height: 39px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #b1a1ca;
+}
+.enjoy_b{
+	width: 318px;
+	height: 256px;
+	border: 1px solid #433b4f;
+	background: #322b3c;
+	margin-top: -1px;
+}
+.enjoy{
+	overflow: hidden;
+}
+.enjoy_b ul{
+	margin-left: 11px;
+	width: 400px;
+	overflow: hidden;
+}
+.enjoy_b ul li{
+	margin: 23px 22px 0 0;
+}
+.healths{
+	background: url(../images/a26.jpg) no-repeat;
+	width: 893px;
+	height: 30px;
+	text-align: center;
+	margin: 0 auto;
+	line-height: 45px;
+	font-size: 16px;
+	color: #9587ab;
+}
+.health p{
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	color: #9587ab;
+}
+.health .p1{
+	margin-top: 20px;
+}
+.footer_t{
+	background: url(../images/a29.png) repeat-x;
+	height: 10px;
+}
+.footer{
+	background: #181818;
+	height: 100px;
+}
+.footers_r{
+	line-height: 25px;
+	margin-top: 25px;
+	color: #9587ab;
+}
+.footers .logo{
+	background: url(../images/a30.png) no-repeat;
+	height: 50px;
+	width: 151px;
+	margin: 20px 17px 0 80px;
+}
+.download_lb .pic img{
+	width: 616px;
+	height: 303px;
+}
+.download_lb .pic a{
+	display: none;
+}
+.download_lb .pic .active{
+	display: block;
+}
+.download_r{
+	display: inline;
+	width: 381px;
+	overflow: hidden;
+}
+
