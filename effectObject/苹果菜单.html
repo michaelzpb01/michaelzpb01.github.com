@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+*{margin:0; padding:0;}
+div{position:fixed; left:0; bottom:0;  width:100%; text-align:center;}
+</style>
+<script>
+window.onload=function(){
+	var oBox = document.getElementsByTagName('div')[0];
+	var aImg = oBox.children;
+	document.onmousemove=function(ev){
+		var oEvent = ev||event;
+		//获取鼠标距离每张图片的距离
+		for(var i=0;i<aImg.length;i++){
+			var a = oBox.offsetLeft+aImg[i].offsetLeft+aImg[i].offsetWidth/2-oEvent.clientX;
+			var b = oBox.offsetTop+aImg[i].offsetTop+aImg[i].offsetHeight/2-oEvent.clientY;
+			var c = Math.sqrt(a*a+b*b);
+			var scale = 1-c/500;
+			
+			(scale<0.5)&&(scale=0.5);
+			
+			
+			aImg[i].width = scale*128;
+			
+			
+			
+			
+			
+		}
+	};
+};
+</script>
+</head>
+
+<body>
+<div>
+	<img src="img/11.png" width="64" />
+	<img src="img/12.png" width="64" />
+	<img src="img/13.png" width="64" />
+	<img src="img/14.png" width="64" />
+	<img src="img/15.png" width="64" />
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

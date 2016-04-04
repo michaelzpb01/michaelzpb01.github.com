@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		body{
+			background: pink;
+		}		
+		p{
+			text-align: center;
+			line-height: 60px;
+			font-size: 50px;
+			font-weight: bold;
+			background:linear-gradient(302deg,#fff,#000,#fff,#000,#fff,#000,#fff,#000,#fff);
+			-webkit-background-clip:text;
+			color:rgba(0,0,0,0);
+			margin-top: 200px;
+			z-index: 10;
+			transition: 1s all ease;
+			overflow: hidden;
+		}
+		/*p:hover{
+			background-position-x:300px;	
+			
+		}*/
+	</style>
+	<script>
+		document.addEventListener('DOMContentLoaded',function(){
+			var oP = document.querySelector('.op');
+			var N = 0;
+			setInterval(function(){
+				N+=10;
+				/*if(N>400){
+					N=10;
+				}*/
+				oP.style.backgroundPositionX = N+'px';
+				//oP.style.backgroundPositionY = N+'px';
+			},100)
+		},false);
+	</script>
+	</head>
+	<body>
+		<div><p class="op">滑动解锁</p></div>
+		
+	</body>
+</html>

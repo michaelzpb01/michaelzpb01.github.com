@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+body{
+	background: url(img2/blm017447.jpg) no-repeat;
+	background-size:100% ;
+}
+*{margin:0; padding:0; list-style:none;}
+ul{width:366px; margin:100px auto;}
+li{width:100px; height:100px; background:#ccc; border:1px solid #000;text-align:center; line-height:100px; float:left; margin:10px;}
+li img{
+	width: 100%;
+	height: 100%;
+}
+#btn1{
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	margin-left: -30px;
+}
+</style>
+<script src="move.js"></script>
+<script>
+window.onload=function(){
+	var oBtn = document.getElementById('btn1');
+	var oUl = document.getElementsByTagName('ul')[0];
+	var aLi = oUl.children;
+	
+	// 布局转换
+	var aPos = [];
+	for(var i=0;i<aLi.length;i++){
+		aPos.push({left:aLi[i].offsetLeft,top:aLi[i].offsetTop});
+	}
+	
+	for(var i=0;i<aLi.length;i++){
+		aLi[i].style.left = aPos[i].left+'px';
+		aLi[i].style.top = aPos[i].top+'px';
+		aLi[i].style.position = 'absolute';
+		aLi[i].style.margin = 0;
+	}
+	
+	var bOk = false;
+	oBtn.onclick=function(){
+		if(bOk)return;
+		bOk = true;
+		for(var i=aLi.length-1;i>=0;i--){
+			(function(index){
+				setTimeout(function(){
+					startMove(aLi[index],{left:700,top:550,width:0,height:0,opacity:0},{complete:function(){
+						if(index==aLi.length-1){
+							//放出来
+							for(var i=aLi.length-1;i>=0;i--){
+								(function(index){
+									setTimeout(function(){
+										startMove(aLi[index],{left:aPos[index].left,top:aPos[index].top,width:100,height:100,opacity:1},{
+											complete:function(){
+												if(index==0){
+													bOk = false;
+												}
+											},
+											duration:300
+										});
+									},(aLi.length-i)*50);
+								})(i);
+							}
+							
+							
+							
+						}
+					},
+						duration:400
+					});
+					
+				},i*50);
+			})(i);
+		}
+	};
+};
+</script>
+</head>
+
+<body>
+<input type="button" value="点击收放" id="btn1" />
+<ul>
+	<li><img src="img2/1.jpg"/></li>
+	<li><img src="img2/2.jpg"/></li>
+	<li><img src="img2/3.jpg"/></li>
+	<li><img src="img2/4.jpg"/></li>
+	<li><img src="img2/5.jpg"/></li>
+	<li><img src="img2/6.jpg"/></li>
+	<li><img src="img2/7.jpg"/></li>
+	<li><img src="img2/8.jpg"/></li>
+	<li><img src="img2/9.jpg"/></li>
+</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

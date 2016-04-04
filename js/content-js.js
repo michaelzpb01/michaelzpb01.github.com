@@ -19,13 +19,9 @@ addReady(function(){
 		var oUserName = document.getElementById('username');
 		
 		var oUndergoUl = document.getElementById('undergo_ul');
-		
-		
 		var oUndergoBtnText = document.getElementById('undergo_btn_text');
 		var oSpeedJ = document.getElementById('speed_j');
 		var oSpeedJn = document.getElementById('speed_jn');
-		var oHint = document.getElementById('hint');
-		
 		
 		var oUndergoUltimer = null;
 		var bOk = false;
@@ -42,7 +38,7 @@ addReady(function(){
 				complete:function(){
 					bOk = false;
 				},
-				duration:300
+				duration:500
 			});
 			numone();
 			if(document.documentElement.clientWidth<1300){
@@ -57,7 +53,7 @@ addReady(function(){
 				sun();
 				bOk2 = false;
 				move(oSkillText,{
-					'top':'850'
+					'top':'910'
 				},{
 					duration:500,
 					complete:function(){
@@ -65,10 +61,10 @@ addReady(function(){
 						oSkillText.style.mozTransition = '0.5s all ease';
 						oSkillText.style.msTransition = '0.5s all ease';
 						oSkillText.style.transition = '0.5s all ease';
-						oSkillText.style.webkitTransform = 'scale(1.1)';
-						oSkillText.style.mozTransform = 'scale(1.1)';
-						oSkillText.style.msTransform = 'scale(1.1)';
-						oSkillText.style.transform = 'scale(1.1)';
+						oSkillText.style.webkitTransform = 'scale(0.7) translateY(-100px)';
+						oSkillText.style.mozTransform = 'scale(0.7) translateY(-100px)';
+						oSkillText.style.msTransform = 'scale(0.7) translateY(-100px)';
+						oSkillText.style.transform = 'scale(0.7) translateY(-100px)';
 					}
 				});
 				
@@ -79,11 +75,10 @@ addReady(function(){
 				oSkillText.style.mozTransition = 'null';
 				oSkillText.style.msTransition = 'null';
 				oSkillText.style.transition = 'null';
-				oSkillText.style.webkitTransform = 'scale(0.9)';
-				oSkillText.style.mozTransform = 'scale(0.9)';
-				oSkillText.style.msTransform = 'scale(0.9)';
-				oSkillText.style.transform = 'scale(0.9)';
-				
+				oSkillText.style.webkitTransform = 'scale(0.05) translateY(0px)';
+				oSkillText.style.mozTransform = 'scale(0.05) translateY(0px)';
+				oSkillText.style.msTransform = 'scale(0.05) translateY(0px)';
+				oSkillText.style.transform = 'scale(0.05) translateY(0px)';
 			}
 		}
 		
@@ -103,6 +98,7 @@ addReady(function(){
 			}
 			
 			numone();
+			//alert(oUndergoUl.scrollHeight)
 			if(iNum == 5){
 				clearInterval(oUndergoUltimer);
 				;(function(){
@@ -110,14 +106,14 @@ addReady(function(){
 					
 					addEvent(oSpeedJ,'click',function(){
 						if(speed>90){
-							alert('谢谢亲看的这么仔细');
+							speed = 90;
 						}
 						speed+=10;
 						timespeed(speed);
 					});
 					addEvent(oSpeedJn,'click',function(){
 						if(speed<10){
-							alert('亲：太快的话看不清楚');
+							speed = 5;
 						}
 						speed-=10;
 						timespeed(speed);
@@ -126,8 +122,8 @@ addReady(function(){
 					function timespeed(speed){
 						clearInterval(oUndergoUltimer);
 						oUndergoUltimer = setInterval(function(){
-							up-=2;
-							oUndergoUl.style.top = up%960+'px';				
+							up-=1;
+							oUndergoUl.style.top = up%635+'px';				
 						},speed);
 					}
 					timespeed(speed);
@@ -151,7 +147,7 @@ addReady(function(){
 				complete:function(){
 					bOk = false;
 				},
-				duration:300
+				duration:500
 				
 			});
 			clear();

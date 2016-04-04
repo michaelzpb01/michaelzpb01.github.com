@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+*{margin:0; padding:0;}
+#box{width:300px; height:300px; border:1px solid #000; border-radius:50%; position:absolute; left:300px; top:100px;}
+#box span{position:absolute; left:50%; top:0; width:50px; height:50px; background:red; border-radius:50%; margin-left:-25px; margin-top:-25px;}
+</style>
+<script>
+//弧度转角度
+function a2d(n){
+	return n*180/Math.PI;
+}
+//角度转弧度
+function d2a(n){
+	return n*Math.PI/180;
+}
+window.onload=function(){
+	var oBox = document.getElementById('box');
+	var b = 0;
+	var R = oBox.offsetWidth/2;
+	var N = 10;
+	for(var i=0;i<N;i++){
+		var oS = document.createElement('span');
+		oBox.appendChild(oS);
+	}
+	var aS = oBox.children;
+	var bOk = true;
+	oBox.onclick=function(){
+		if(bOk){
+			for(var i=0;i<aS.length;i++){
+				startMove(aS[i],i*360/N);
+			}
+		}else{
+			for(var i=0;i<aS.length;i++){
+				startMove(aS[i],0);
+			}
+		}
+		
+		bOk = !bOk;
+	};
+	function startMove(obj,iTarget){
+		var start = obj.a||0;
+		var dis = iTarget - start;
+		var n = 0;
+		var count = Math.floor(2000/30);
+		
+		clearInterval(obj.timer);
+		obj.timer = setInterval(function(){
+			n++;
+			var a = 1-n/count;
+			var cur = start+dis*(1-Math.pow(a,3));
+			obj.a = cur;
+			var x = R+Math.sin(d2a(cur))*R;
+			var y = R-Math.cos(d2a(cur))*R;
+			
+			obj.style.left = x+'px';
+			obj.style.top = y+'px';
+			
+			if(n==count){
+				clearInterval(obj.timer);
+			}
+		},30);
+	}
+};
+</script>
+</head>
+
+<body>
+<div id="box">
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

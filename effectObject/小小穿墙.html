@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+*{margin:0; padding:0; list-style:none;}
+ul{overflow:hidden; width:630px;}
+li{ width:200px; height:200px; float:left; position:relative; top:0; left:0; margin:5px; background:#ccc; line-height:200px; font-size:30px; overflow:hidden;}
+li span{width:100%; height:100%; position:absolute; top:0; left:-200px; background:rgba(0,0,0,0.4);}
+li img{
+	width: 100%;
+	height: 100%;
+}
+</style>
+<script src="move.js"></script>
+<script>
+function a2d(n){
+	return n*180/Math.PI;
+}
+function hoverDir(obj,ev){
+	var w = obj.offsetWidth;
+	var h = obj.offsetHeight;
+	var x = obj.offsetLeft+w/2-ev.clientX;
+	var y = obj.offsetTop+h/2-ev.clientY;
+	return Math.round((a2d(Math.atan2(y,x))+180)/90)%4;
+}
+function through(obj)
+{
+	var oS = obj.children[0];
+	obj.onmouseover=function(ev){
+		var oEvent = ev||event;
+		var oForm = oEvent.formElement||oEvent.relatedTarget;
+		if(this.contains(oForm))return;
+		var dir = hoverDir(this,oEvent);
+		switch(dir){
+			case 0:
+				//右
+				oS.style.left = '200px';
+				oS.style.top = 0;
+				break;
+			case 1:
+				//下
+				oS.style.left = 0;
+				oS.style.top = '200px';
+				break;
+			case 2:
+				//左
+				oS.style.left = '-200px';
+				oS.style.top = 0;
+				break;
+			case 3:
+				//上
+				oS.style.left = 0;
+				oS.style.top = '-200px';
+				break;
+		}
+		startMove(oS,{top:0,left:0});
+	};
+	obj.onmouseout=function(ev){
+		var oEvent = ev||event;
+		var oTo = oEvent.toElement||oEvent.relatedTarget;
+		if(this.contains(oTo))return;
+		var dir = hoverDir(this,oEvent);
+		switch(dir){
+			case 0:
+				//右
+				startMove(oS,{left:200,top:0});
+				break;
+			case 1:
+				//下
+				startMove(oS,{left:0,top:200});
+				break;
+			case 2:
+				//左
+				startMove(oS,{left:-200,top:0});
+				break;
+			case 3:
+				//上
+				startMove(oS,{left:0,top:-200});
+				break;
+		}
+	};
+}
+window.onload=function(){
+	var oUl = document.getElementsByTagName('ul')[0];
+	var aLi = oUl.children;
+	for(var i=0;i<aLi.length;i++){
+		through(aLi[i]);
+	}
+};
+</script>
+</head>
+
+<body>.
+	<ul>
+		<li><span></span>
+			<img src="image/00327010400.jpg"/>
+		</li>
+		<li><span></span>
+			<img src="image/10282000062.jpg"/>
+		</li>
+		<li><span></span>
+			<img src="image/10376000346.jpg"/>
+		</li>
+		<li><span></span>
+			<img src="image/10428000646.jpg"/>
+		</li>
+		<li><span></span>
+			<img src="image/east-ep-a11-4666769.jpg"/>
+		</li>
+		<li><span></span>
+			<img src="image/east-ep-a21-4666631.jpg"/>
+		</li>
+	</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

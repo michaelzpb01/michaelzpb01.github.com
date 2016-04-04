@@ -9,15 +9,21 @@
 	overflow: hidden;
 	min-width: 100%;
 }
+
+.page_f .bg img{
+	width: 100%;
+	height: 100%;
+}
+
 .header .logo{
-	width: 216px;
-	height: 52px;
-	background: url(../images/logo.png) no-repeat;
+	width: 385px;
+	height: 72px;
+	background:url(../images/logo.png) no-repeat;
 	position: absolute;
 	text-indent: -99999px;
-	top: 20px;
-	left: 30px;
-	background-size: 80%;
+	left: 50px;
+	top: 18px;
+	background-size: 40%;
 }
 .header .ul{
 	position: absolute;
@@ -71,7 +77,7 @@
 .shade{
 	position: absolute;
 	width: 100%;
-	height: 100%;
+	height: 200%;
 	z-index: 1000;
 	background: #000;
 	opacity: 0.6;
@@ -126,7 +132,7 @@
 .intros .intros_l{
 	left: 0;
 	top: -1000px;
-	background: rgba(23,31,37,0.5);
+	background: rgba(0,0,0,0.45)
 }
 .intros .intros_r{
 	right: 0;
@@ -138,21 +144,21 @@
 /*首页内容开始*/
 
 .username{
-	font-size: 50px;
+	font-size: 42px;
 	position: absolute;
 	top: 150px;
 	right: 270px;
 	font-weight: bold;
-	color: #0ad7b3;
+	color: #ddd;
 	letter-spacing: 10px;
 }
 .intros_l_message{
 	position: absolute;
 	top: 230px;
 	right: 130px;
-	color: #0ad7b3;
-	font-size: 24px;
-	line-height: 60px;
+	color: #c5c5c5;
+	font-size: 18px;
+	line-height: 50px;
 }
 .intros_r .intros_l_message{
 	top: 308px;
@@ -163,18 +169,175 @@
 
 
 
+.page_son{
+	position: absolute;
+	width: 700px;
+	height: 700px;
+	margin-top: 20px;
+	left: 50%;
+	margin-left: -350px;
+	border-radius: 50%;
+	-webkit-transform: skewX(-50deg);
+	-moz-transform: skewX(-50deg);
+	-ms-transform: skewX(-50deg);
+}
+.centet_son{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	top: 50%;
+	left: 50%;
+	margin-top: -40px;
+	margin-left: -40px;
+	background: url(../images/sun.png) no-repeat;
+	z-index: 11;
+	background-size: 100%;
+	-webkit-transform: skewX(50deg);
+	-moz-transform: skewX(50deg);
+	-ms-transform: skewX(50deg);
+	transition: 1s all ease;
+}
+
+.page_sun_xq1,.page_sun_xq2,.page_sun_xq3,.page_sun_xq4,.page_sun_xq5{
+	position: absolute;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+}
+
+
+.page_sun_xq1 .sun_cont,.page_sun_xq2 .sun_cont,.page_sun_xq3 .sun_cont,.page_sun_xq4 .sun_cont,.page_sun_xq5 .sun_cont{
+	width: 50px;
+	height: 50px;
+	background:url(../images/xq_9.png) no-repeat;
+	background-size: 100%;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	-webkit-transform: skewX(50deg);
+	-moz-transform: skewX(50deg);
+	-ms-transform: skewX(50deg);
+	margin-top: -25px;
+	margin-left: -25px;
+}
+
+
+
+
+.page_sun_xq1{
+	width: 600px;
+	top: 50%;
+	left: 50%;
+	height: 600px;
+	margin-left: -300px;
+	margin-top:-300px;
+}
+.page_sun_xq2{
+	width: 500px;
+	top: 50%;
+	left: 50%;
+	height: 500px;
+	margin-left: -250px;
+	margin-top:-250px;
+}
+.page_sun_xq3{
+	width: 400px;
+	top: 50%;
+	left: 50%;
+	height: 400px;
+	margin-left: -200px;
+	margin-top:-200px;
+}
+.page_sun_xq4{
+	width: 300px;
+	top: 50%;
+	left: 50%;
+	height: 300px;
+	margin-left: -150px;
+	margin-top:-150px;
+}
+.page_sun_xq5{
+	width: 200px;
+	top: 50%;
+	left: 50%;
+	height: 200px;
+	margin-left: -100px;
+	margin-top:-100px;
+}
+
+.page_sun_xq2 .sun_cont{
+	background:url(../images/xq_8.png) no-repeat;
+	background-size: 100%;
+	width: 70px;
+	height: 70px;
+}
+.page_sun_xq4 .sun_cont{
+	background:url(../images/xq_3.png) no-repeat;
+	background-size: 100%;
+	
+}
+.page_sun_xq5 .sun_cont{
+	background:url(../images/xq_4.png) no-repeat;
+	background-size: 100%;
+}
+.page_sun_xq3 .sun_cont{
+	background:url(../images/xq_7.png) no-repeat;
+	background-size: 100%;
+	width: 70px;
+	height: 70px;
+}
+
+
+
+
+/**/
+.xq_text{
+	width: 200px;
+	background: red;
+	position: absolute;
+	top: 50px;
+	left: -70px;
+	height: 0;
+	overflow: hidden;
+}
 
 
 
 
 
+/*-----------------------*/
 
+/*skill*/
 
-
-
-
-
-
-
-
-
+.skill{
+	width: 100%;
+	height: 100%;
+	line-height: 35px;
+	font-size: 24px;
+	line-height: 24px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.4);
+}
+.skill ul{
+	width: 1000px;
+	height: 400px;
+	line-height: 72px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -750px;
+	margin-left: -500px;
+}
+.skill a{
+	color: #e6e6e6;
+}
+.skill .skill_text p{
+	position: relative;
+}
+.skill .skill_text span{
+	position: absolute;
+	left: -30px;
+	top: -5px;
+	font-size: 70px;
+}

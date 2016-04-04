@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+*{magin:0; padding:0;}
+.box{width:700px; height:400px; background:url(img/1.jpg) no-repeat; margin:100px auto; position:relative; top:0; left:0;}
+
+.box .page1{height:100%; width:50%; position:absolute; right:0; top:0; -webkit-transform-style:preserve-3d; -webkit-transform:perspective(800px) rotateY(0deg); -webkit-transform-origin:left; z-index:3;}
+.box .page1 .front{position:absolute; width:100%; height:100%; background:url(img/1.jpg) no-repeat right top; -webkit-transform:translateZ(1px);}
+.box .page1 .back{position:absolute; width:100%; height:100%; background:url(img/2.jpg) no-repeat; -webkit-transform:translateZ(-1px) scale(-1,1);}
+.box .page2{position:absolute; top:0; right:0; width:50%; height:100%; background:url(img/2.jpg) no-repeat right top; z-index:1;}
+.box .shadow{position:absolute; top:0; right:0; width:50%; height:100%; background:#000; opacity:1; z-index:2; -webkit-transition:1s all ease;}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+	var oBox = document.querySelector('.box');
+	var oPage1 = document.querySelector('.box .page1');
+	var oF = oPage1.children[0];
+	var oB = oPage1.children[1];
+	var oPage2 = document.querySelector('.box .page2');
+	var oShadow = document.querySelector('.box .shadow');
+	var iNow = 0;
+	var bOk = false;
+	oBox.onclick=function(){
+		if(bOk)return;
+		bOk = true;
+		iNow++;
+		oPage1.style.WebkitTransition = '1s all ease';
+		oPage1.style.WebkitTransform = 'perspective(800px) rotateY(-180deg)';
+		oShadow.style.opacity = 0;
+		oPage1.addEventListener('transitionend',function(){
+			oPage1.style.WebkitTransition = 'none';
+			oPage1.style.WebkitTransform = 'perspective(800px) rotateY(0deg)';
+			oBox.style.backgroundImage = 'url(img/'+(iNow%3+1)+'.jpg)';
+			oF.style.backgroundImage = 'url(img/'+(iNow%3+1)+'.jpg)';
+			oB.style.backgroundImage = 'url(img/'+((iNow+1)%3+1)+'.jpg)';
+			oPage2.style.backgroundImage = 'url(img/'+((iNow+1)%3+1)+'.jpg)';
+			oShadow.style.opacity = 1;
+			bOk = false;
+		},false);
+	};
+},false);
+</script>
+</head>
+
+<body>
+<div class="box">
+	<div class="page1">
+		<div class="front"></div>
+		<div class="back"></div>
+	</div>
+	<div class="shadow"></div>
+	<div class="page2"></div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

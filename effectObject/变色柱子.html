@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+*{margin:0; padding:0;}
+@keyframes test{
+	form{left:0;}
+	to{left:-114px;}
+}
+.box{width:500px; height:80px;  margin:100px auto; overflow:hidden; position:relative; top:0; left:0;}
+.box .bar{width:800px; height:300px; background:repeating-linear-gradient(-45deg,red 0px, red 20px,#fff 20px,#fff 40px,blue 40px, blue 60px, #fff 60px, #fff 80px); position:absolute; top:0; left:0;
+	animation-name:test;
+	animation-duration:.4s;
+	animation-timing-function:linear;
+	animation-iteration-count:infinite;
+
+}
+</style>
+<script>
+	document.addEventListener('DOMContentLoaded',function(){
+		var oColor_s = document.querySelector('#color_s');
+		var oColor_v = document.querySelector('#color_v');
+		var oBar = document.querySelector('.bar');
+		oColor_v.onchange = oColor_s.onchange = function(){
+			oBar.style.background = 'repeating-linear-gradient(-45deg,'+this.value+' 0px, '+this.value+' 20px,#fff 20px,#fff 40px,blue 40px, blue 60px, #fff 60px, #fff 80px)';
+		};
+	},false);
+</script>
+</head>
+
+<body>
+<input type="color"  id="color_s"/>
+<input type="color"  id="color_v"/>
+<div class="box">
+	<div class="bar"></div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

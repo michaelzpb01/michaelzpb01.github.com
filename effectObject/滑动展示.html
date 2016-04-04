@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+*{margin:0; padding:0; list-style:none;}
+#box{width:700px; height:358px; margin:100px auto; border:1px solid #000; position:relative; top:0; left:0; overflow:hidden;}
+#box ul{position:absolute; top:90px; left:0;}
+#box ul li{float:left;width:260px; height:179px; position:relative; top:0; left:0;}
+#box ul li img{width:260px; position:absolute; top:0; left:0;}
+</style>
+<script>
+window.onload=function(){
+	var oBox = document.getElementById('box');
+	var oUl = oBox.children[0];
+	var aLi = oUl.children;
+	var aImg = oUl.getElementsByTagName('img');
+	oUl.style.width = aLi.length*aLi[0].offsetWidth+'px';
+	var divC = oBox.offsetWidth/2;
+	oUl.onmousedown=function(ev){
+		var oEvent = ev||event;
+		var disX = oEvent.clientX-oUl.offsetLeft;
+		document.onmousemove=function(ev){
+			var oEvent = ev||event;
+			var l = oEvent.clientX-disX;
+			if(l>divC-(0+0.5)*aLi[0].offsetWidth){
+				l = divC-(0+0.5)*aLi[0].offsetWidth;
+			}else if(l<divC-(aLi.length-1+0.5)*aLi[0].offsetWidth){
+				l = divC-(aLi.length-1+0.5)*aLi[0].offsetWidth;
+			}
+			oUl.style.left = l+'px';
+			for(var i=0;i<aLi.length;i++){
+				var dis = divC-(oUl.offsetLeft+aLi[i].offsetLeft+aLi[i].offsetWidth/2);
+				var scale = 1-Math.abs(dis)/500;
+				(scale<0.5)&&(scale=0.5);
+				aImg[i].style.width = scale*520+'px';
+				aImg[i].style.height = scale*358+'px';
+				aImg[i].style.marginLeft = -(aImg[i].offsetWidth-260)/2+'px';
+				aImg[i].style.marginTop = -(aImg[i].offsetHeight-179)/2+'px';
+				aImg[i].style.zIndex = scale*100000;
+			}
+		};
+		document.onmouseup=function(){
+			document.onmousemove=null;
+			document.onmouseup=null;
+			oUl.releaseCapture&&oUl.releaseCapture();
+		};
+		oUl.setCapture&&oUl.setCapture();
+		return false;
+	};
+	function setSize(){
+		for(var i=0;i<aLi.length;i++){
+			var dis = divC-(oUl.offsetLeft+aLi[i].offsetLeft+aLi[i].offsetWidth/2);
+			var scale = 1-Math.abs(dis)/500;
+			(scale<0.5)&&(scale=0.5);
+			aImg[i].style.width = scale*520+'px';
+			aImg[i].style.height = scale*358+'px';
+			aImg[i].style.marginLeft = -(aImg[i].offsetWidth-260)/2+'px';
+			aImg[i].style.marginTop = -(aImg[i].offsetHeight-179)/2+'px';
+			aImg[i].style.zIndex = scale*100000;
+		}
+	}
+	//先把它调到中间的位置
+	oUl.style.left = divC-(1+0.5)*aLi[0].offsetWidth+'px';
+	setSize();
+};
+</script>
+</head>
+
+<body>
+<div id="box">
+	<ul>
+		<li><img src="img3/1.jpg" /></li>
+		<li><img src="img3/2.jpg" /></li>
+		<li><img src="img3/3.jpg" /></li>
+		<li><img src="img3/4.jpg" /></li>
+		<li><img src="img3/5.jpg" /></li>
+		<li><img src="img3/6.jpg" /></li>
+		<li><img src="img3/7.jpg" /></li>
+		<li><img src="img3/8.jpg" /></li>
+	</ul>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+

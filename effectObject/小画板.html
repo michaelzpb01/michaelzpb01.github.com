@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			
+		}
+		body{
+			background: #000;
+		}
+		canvas{
+			background: #fff;
+		}
+	</style>
+	<script>
+		function rnd(n,m){
+			return Math.floor(n+Math.random()*(m-n));
+		}
+		document.addEventListener('DOMContentLoaded',function(){
+			var oC = document.getElementById('c1');
+			var gd = oC.getContext('2d');
+			var x = 0,
+				y = 0,
+				w = 10,
+				h = 10;
+			
+			oC.onmousedown = function(ev){
+				
+				document.onmousemove = function(ev){
+					var downx = ev.pageX;
+					var downy = ev.pageY;
+					gd.fillRect(downx,downy,w,h);
+					gd.fillStyle = 'rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+					gd.fill()	
+				};
+				document.onmouseup = function(){
+					document.onmousemove = null;
+				};
+				
+				/*if(downx>x&&(downx<x+w)&&downy>y&&(downy<y+h)){
+					var disx = ev.pageX-x;
+					var disy = ev.pageY-y;
+					document.onmousemove = function(ev){
+						//gd.clearRect(0,0,oC.width,oC.height);
+						gd.beginPath();
+						x = ev.pageX-disx;
+						y = ev.pageY-disy;
+						gd.strokeRect(x,y,w,h);
+						gd.stroke();
+					};
+					document.onmouseup = function(){
+						document.onmousemove = null;
+						document.onmouseup = null;
+					};
+					
+					
+				}*/
+			};
+			
+			
+		},false);
+	</script>
+	</head>
+	<body>
+		<canvas id="c1" width="800" height="600"></canvas>
+	</body>
+</html>

@@ -8,7 +8,6 @@
 		var arr = [];
 		for(var i = 0;i<aLi.length;i++){
 			arr.push(aLi[i].className);
-			
 		}
 		oNext.onclick = function(){
 			arr.unshift(arr.pop());
@@ -21,6 +20,20 @@
 			for(var i = 0;i<aLi.length;i++){
 				aLi[i].className = arr[i];
 			}
+		};
+		
+		oNext.onmouseenter = function(){
+			this.style.background = '#15ceac';
+		};
+		oNext.onmouseleave = function(){
+			this.style.background = '#9f9f9f';
+		};
+		
+		oPrev.onmouseenter = function(){
+			this.style.background = '#15ceac';
+		};
+		oPrev.onmouseleave = function(){
+			this.style.background = '#9f9f9f';
 		};
 		
 		;(function(){

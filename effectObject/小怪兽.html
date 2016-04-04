@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<meta name="description" content="智能社是一家专注于web前端开发技术的公司，目前主要提供JavaScript培训和HTML5培训两项服务，同时还推出了大量javascript基础知识教程，智能课堂为你带来全新的学习方法和快乐的学习体验。" />
+<title>智能社— http://www.zhinengshe.com</title>
+<style>
+*{margin:0; padding:0;}
+body{background:#000; text-align:center;}
+canvas{background:#fff;}
+</style>
+<script>
+window.onload=function(){
+	var oC = document.getElementById('c1');
+	var gd = oC.getContext('2d');
+	var oImg = new Image();
+	oImg.src='20110222_14.png';
+	oImg.onload=function(ev){
+		var w = 40;
+		var h = 55;
+		var x = 0;
+		var y = 0;
+		var speedY = 0;
+		var speedX = 0;
+		var oEvent = ev||event;
+		var L = 0;
+		var M = 0
+		setInterval(function(){
+			if(y == 0){
+				speedY+=5;
+				L = 100+speedY;
+			}else if(y == 55){
+				speedX-=5;
+				M = 100+speedX;
+			}else if(y == 110){
+				speedX+=5;
+				M = 100+speedX;
+			}else if(y == 165){
+				speedY-=5;
+				L = 100+speedY;
+			}
+			gd.clearRect(0,0,oC.width,oC.height);
+			x+=w;
+			gd.drawImage(
+				oImg,
+				x%160,y,w,h,
+				M,L,80,115
+			);
+		},100);
+		setInterval(function(){
+			y+=55;
+			y%= 55*4;
+		},3000);
+	};
+};
+</script>
+</head>
+
+<body>
+<canvas id="c1" width="800" height="600"></canvas>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

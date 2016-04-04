@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+*{margin:0; padding:0;}
+html,body{overflow:hidden; background: rgba(0,0,0,0.2);height: 100%;width: 100%;}
+.box{width:700px; height:400px; background:url(img/2.jpg) no-repeat; margin:100px auto; position:relative; top:0; left:0; -webkit-transform-style:preserve-3d; perspective:800px;}
+.box span{position:absolute; background:url(img/1.jpg) no-repeat; -webkit-transform:translate(0,0) rotateX(0deg) rotateY(0deg);}
+</style>
+<script>
+function rnd(n,m){
+	return Math.floor(n+Math.random()*(m-n));
+}
+document.addEventListener('DOMContentLoaded',function(){
+	var oBox = document.querySelector('.box');
+	var R = 4;
+	var C = 7;
+	for(var i=0;i<R;i++){
+		for(var j=0;j<C;j++){
+			var oS = document.createElement('span');
+			oS.style.width = oBox.offsetWidth/C+'px';
+			oS.style.height = oBox.offsetHeight/R+'px';
+			oBox.appendChild(oS);
+			oS.style.left = j*oS.offsetWidth+'px';
+			oS.style.top = i*oS.offsetHeight+'px';
+			oS.style.backgroundPosition='-'+j*oS.offsetWidth+'px -'+i*oS.offsetHeight+'px';
+		}
+	}
+	var iNow = 0;
+	var bOk = false;
+	oBox.onclick=function(){
+		if(bOk)return;
+		bOk = true;
+		iNow++;
+		var aS = document.querySelectorAll('.box span');
+		for(var i=0;i<aS.length;i++){
+			aS[i].style.WebkitTransition = '1s all ease';
+			var disX = aS[i].offsetLeft+aS[i].offsetWidth/2-oBox.offsetWidth/2;
+			var disY = aS[i].offsetTop+aS[i].offsetHeight/2-oBox.offsetHeight/2;
+			
+			aS[i].style.WebkitTransform='translate('+disX+'px,'+disY+'px) rotateX('+rnd(-180,180)+'deg) rotateY('+rnd(-180,180)+'deg)';
+			aS[i].style.opacity = 0;
+			
+		}
+		aS[aS.length-1].addEventListener('transitionend',function(){
+			for(var i=0;i<aS.length;i++){
+				aS[i].style.WebkitTransition = 'none';
+				aS[i].style.backgroundImage = 'url(img/'+(iNow%3+1)+'.jpg)';
+				
+				aS[i].style.opacity = 1;
+				aS[i].style.WebkitTransform='translate(0,0) rotateX(0deg) rotateY(0deg)';
+			}
+			oBox.style.backgroundImage = 'url(img/'+((iNow+1)%3+1)+'.jpg)';
+			bOk = false;
+		},false);
+	};
+},false);
+</script>
+</head>
+
+<body>
+<div class="box"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

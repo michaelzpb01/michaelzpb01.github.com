@@ -1,0 +1,60 @@
+.project_ul{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.project_ul li{
+	width: 200px;
+	height: 200px;
+	border-radius: 20px;
+	border: 1px solid #ccc;
+	float: left;
+	overflow: hidden;
+	position: absolute;
+}
+.project_ul li .project_mask{
+	width: 100%;
+	height: 100%;
+	background: rgba(153,153,153,0.6);
+	position:absolute;
+	top:0;
+	left:-200px;
+	z-index: 3;
+	overflow: hidden;
+}
+.project_ul li .project_mask h3{
+	margin-top: 35px;
+	margin-bottom: 20px;
+	position: relative;
+	z-index: -1;
+}
+.project_ul li img{
+	width: 100%;
+	height: 100%;
+}
+.project_ul .Pro_black{
+	position: absolute;
+	right: 20px;
+	bottom: 10px;
+	width: 75px;
+	height: 2em;
+	background: #738C73;
+	text-align: center;
+	line-height: 2em;
+	color: #fff;
+	border-radius: 5px;
+}
+.undergo_ul{
+	color: #fff;
+	font-size: 18px;
+	font-weight: normal;
+}
+.undergo_ul li{
+	margin-top: 30px;
+}
+.undergo_color{
+	color: #0ad7b3;
+	font-size: 24px;
+	line-height: 38px;
+	margin-bottom: 22px;
+}

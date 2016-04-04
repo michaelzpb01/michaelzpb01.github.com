@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+*{margin:0; padding:0; list-style:none;}
+ul{width:300px; height:200px; position:absolute; top:50%; left:50%; margin-left:-150px; margin-top:-100px; perspective:800px;}
+ul li{width:100%; height:100%; position:absolute; top:0; left:0; background:#ccc; text-align:center; line-height:200px; font-size:50px; opacity:0; border:1px solid #000; -webkit-transition:.5s all ease;}
+ul li.l2{opacity:0; -webkit-transform:translateX(-250px) rotateY(65deg); z-index:1;}
+ul li.l1{opacity:0.8; -webkit-transform:translateX(-200px) rotateY(60deg); z-index:3;}
+ul li.cur{opacity:1; z-index:5;}
+ul li.r1{opacity:0.8; -webkit-transform:translateX(200px) rotateY(-60deg); z-index:3;}
+ul li.r2{opacity:0; -webkit-transform:translateX(250px) rotateY(-65deg); z-index:1;}
+
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+	var oPrev = document.querySelector('.prev');
+	var oNext = document.querySelector('.next');
+	var aLi = document.querySelectorAll('ul li');
+	var aClass = [];
+	for(var i=0;i<aLi.length;i++){
+		aClass.push(aLi[i].className);
+	}
+	oNext.onclick=function(){
+		aClass.unshift(aClass.pop());
+		for(var i=0;i<aLi.length;i++){
+			aLi[i].className=aClass[i];
+		}
+	};
+	oPrev.onclick=function(){
+		aClass.push(aClass.shift());
+		for(var i=0;i<aLi.length;i++){
+			aLi[i].className=aClass[i];
+		}
+	};
+},false);
+</script>
+</head>
+
+<body>
+<a href="javascript:;" class="prev">←</a>
+<a href="javascript:;" class="next">→</a>
+<ul>
+	<li class="cur">1</li>
+	<li class="r1">2</li>
+	<li class="r2">3</li>
+	<li>4</li>
+	<li>5</li>
+	<li>6</li>
+	<li>7</li>
+	<li>8</li>
+	<li>9</li>
+	<li class="l2">10</li>
+	<li class="l1">11</li>
+</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

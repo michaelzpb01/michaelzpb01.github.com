@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+*{margin:0; padding:0;}
+body{background:#000; text-align:center;}
+canvas{background:#fff;}
+</style>
+<script>
+function d2a(n){
+	return n*Math.PI/180;
+}
+function toDou(iNum){
+	return iNum<10?'0'+iNum:''+iNum;
+}
+document.addEventListener('DOMContentLoaded',function(){
+	var oC = document.getElementById('c1');
+	var gd = oC.getContext('2d');
+	var cx = oC.width/2;
+	var cy = oC.height/2;
+	function drawArc(cx,cy,r,s,e,color){
+		r = r||100;
+		color = color||'black';
+		gd.beginPath();
+		gd.lineWidth = 20;
+		gd.strokeStyle = color;
+		gd.arc(cx,cy,r,d2a(s-90),d2a(e-90),false);
+		gd.stroke();
+	}
+	
+	function tick(){
+		
+		gd.clearRect(0,0,oC.width,oC.height);
+		
+		gd.fillStyle = '#f1f1f1';
+		gd.arc(cx,cy,110,0,360,false);
+		gd.fill();
+		var oDate = new Date();
+		var h = oDate.getHours()%12;
+		var m = oDate.getMinutes();
+		var s = oDate.getSeconds();
+		drawArc(cx,cy,60,0,h*30,'red');
+		drawArc(cx,cy,80,0,m*6,'green');
+		drawArc(cx,cy,100,0,s*6,'yellow');
+		
+		gd.beginPath();
+		var str = toDou(h)+':'+toDou(m)+':'+toDou(s);
+		gd.font = '18px 微软雅黑';
+		gd.textAlign = 'center';
+		gd.textBaseline = 'middle';
+		gd.fillStyle = 'red';
+		gd.fillText(str,cx,cy);
+	}
+	tick();
+	setInterval(tick,1000);
+	
+	
+	
+},false);
+</script>
+</head>
+
+<body>
+<canvas id="c1" width="800" height="600"></canvas>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

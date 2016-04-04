@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html>	
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
+		<link rel="stylesheet" href="css/common.css" />
 		<link rel="stylesheet" href="css/master.css" />
+		<link rel="stylesheet" href="css/personage.css" />
+		<link rel="stylesheet" href="css/effect.css" />
+		<link rel="stylesheet" href="css/prodt.css" />
+		<link rel="stylesheet" href="css/project.css" />
 		<script src="js/move.js"></script>
 		<script src="js/Msense1.1.1.js"></script>
 		<script src="js/content-js.js"></script>
 		<script src="js/prodt.js"></script>
 		<script src="js/effect.js"></script>
 		<script src="js/doMove.js"></script>
+		<script src="js/project.js"></script>
 	</head>
 	<body>
 		<!--头部导航栏-->
@@ -99,45 +105,45 @@
 				
 				<!--第二页文字部分-->
 				<div class="skill">
-					<ul id="skill_text">
+					<ul id="skill_text" class="skill_text">
 						<li>
 							<a href="javascript:;">
-								<p>熟练原生JavaScript，能够构思并作出基本主流效果，对于新的需求能很快给出思路；</p>
+								<p><span>·</span>熟练原生JavaScript，能够构思并作出基本主流效果，对于新的需求能很快给出思路；</p>
 							</a>
 						</li>
 						<li>
 							<a href="javascript:;">
-								<p>熟练jQuery库，进行动态效果的实现与页面交互，并了解jQuery原理，可以编写类似的库；</p>
+								<p><span>·</span>熟练jQuery库，进行动态效果的实现与页面交互，并了解jQuery原理，可以编写类似的库；</p>
 							</a>
 						</li>
 						<li>
 							<a href="javascript:;">
-								<p>熟练面向对象，正则，MVC分离，基本的算法和数据结构；</p>
+								<p><span>·</span>熟练面向对象，正则，MVC分离，基本的算法和数据结构；</p>
 							</a>
 						</li>
 						<li>
 							<a href="javascript:;">
-								<p>熟练掌握AJAX，JSONP等交互技术，JSON数据交换格式；</p>
+								<p><span>·</span>熟练掌握AJAX，JSONP等交互技术，JSON数据交换格式；</p>
 							</a>
 						</li>
 						<li>
 							<a href="javascript:;">
-								<p>熟练掌握H5+CSS3 ， 能够进行手机页面开发；</p>
+								<p><span>·</span>熟练掌握H5+CSS3 ， 能够进行手机页面开发；</p>
 							</a>
 						</li>
 						<li>
 							<a href="javascript:;">
-								<p>熟悉SeaJS ，AngularJS框架；</p>
+								<p><span>·</span>熟悉SeaJS ，AngularJS框架；</p>
 							</a>
 						</li>
 						<li>
 							<a href="javascript:;">
-								<p>熟悉PhotoShop能熟练绘制网页效果图，切片，优化等；</p>
+								<p><span>·</span>熟悉PhotoShop能熟练绘制网页效果图，切片，优化等；</p>
 							</a>
 						</li>
 						<li>
 							<a href="javascript:;">
-								<p>熟悉Grunt，Gulp等工具的使用；</p>
+								<p><span>·</span>熟悉Grunt，Gulp等工具的使用；</p>
 							</a>
 						</li>
 						
@@ -150,21 +156,127 @@
 				<div class="bg">
 					<img src="images/wp5.jpg" alt="" />
 				</div>
-				<div class="content effect">
-					<ul class="effect_ul">
-					 	<li></li>
-					 	<li></li>
-					 	<li></li>
-					 	<li></li>
-					 	<li></li>
-					 	<li></li>
+				<div class="content effect" id="effect">
+					<ul class="effect_ul" style="display: block;">
+					 	<li>
+					 		<a href="effectObject/css3小时钟7.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/10.jpg" alt="aa" /></div>
+						 		<div class="li_b">CSS3时钟</div>
+						 	</a>
+					 	</li>
+					 	<li>
+					 		<a href="effectObject/爆炸.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/11.jpg"/></div>
+						 		<div class="li_b">爆炸切换效果</div>
+					 		</a>
+					 	</li>
+					 	<li>
+					 		<a href="effectObject/h5展览效果.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/9.jpg"/></div>
+						 		<div class="li_b">CSS3列表</div>
+					 		</a>
+					 	</li>
+					 	<li>
+					 		<a href="effectObject/弹力球.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/8.jpg"/></div>
+						 		<div class="li_b">JavaScript弹球</div>
+					 		</a>
+					 	</li>
+					 	<li>
+					 		<a href="effectObject/翻书效果.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/7.jpg"/></div>
+						 		<div class="li_b">翻书效果</div>
+					 		</a>
+					 	</li>
+					 	<li>
+					 		<a href="effectObject/颗粒翻转.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/6.jpg"/></div>
+						 		<div class="li_b">颗粒翻转</div>
+					 		</a>
+					 	</li>
 					 </ul>
-					<ol class="effect_btn">
-						<li class="on">1</li>
-						<li>2</li>
-						<li>3</li>
-					</ol>
+					 <ul class="effect_ul">
+					 	<li>
+					 		<a href="effectObject/收放菜单.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/5.jpg"/></div>
+						 		<div class="li_b">收放菜单</div>
+					 		</a>
+					 	</li>
+					 	<li>
+					 		<a href="effectObject/小小穿墙.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/4.jpg"/></div>
+						 		<div class="li_b">穿墙</div>
+					 		</a>
+					 	</li>
+					 	<li>
+					 		<a href="effectObject/圆.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/3.jpg"/></div>
+						 		<div class="li_b">圆</div>
+					 		</a>
+					 	</li>
+					 	<li>
+					 		<a href="effectObject/小画板.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/2.jpg"/></div>
+						 		<div class="li_b">Canvas画板</div>
+					 		</a>
+					 	</li>
+					 	<li>
+					 		<a href="effectObject/倒影.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/1.jpg"/></div>
+						 		<div class="li_b">倒影</div>
+					 		</a>
+					 	</li>
+					 	<li>
+					 		<a href="effectObject/windows屏保.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/13.jpg"/></div>
+						 		<div class="li_b">Windows屏保</div>
+					 		</a>
+					 	</li>
+					 </ul>
+					 <ul class="effect_ul">
+					 	<li>
+					 		<a href="effectObject/canvas表.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/12.jpg"/></div>
+						 		<div class="li_b">Canvas时钟</div>
+					 		</a>
+					 	</li>
+					 	<li>
+					 		<a href="effectObject/3D图片轮换/3D图片轮换.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/111.jpg"/></div>
+						 		<div class="li_b">3D图片轮换</div>
+					 		</a>
+					 	</li>
+					 	<li>
+					 		<a href="effectObject/滑动展示.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/114.jpg"/></div>
+						 		<div class="li_b">滑动展示</div>
+					 		</a>
+					 	</li>
+					 	<li>
+					 		<a href="effectObject/3D图片换.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/16.jpg"/></div>
+						 		<div class="li_b">3D图片环</div>
+					 		</a>
+					 	</li>
+					 	<li>
+					 		<a href="effectObject/苹果菜单.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/115.jpg" alt="" /></div>
+						 		<div class="li_b">苹果菜单</div>
+					 		</a>
+					 	</li>
+					 	<li>
+					 		<a href="effectObject/tiger.html" target="_blank">
+						 		<div class="li_t"><img src="images/effectImg/18.jpg" alt="" /></div>
+						 		<div class="li_b">rephael-tiger</div>
+					 		</a>
+					 	</li>
+					 </ul>
 				</div>
+				<ol class="effect_btn" id="effect_btn">
+					<li class="on">1</li>
+					<li>2</li>
+					<li>3</li>
+				</ol>
 			</div>
 			<!--作品展示-->
 			<div class="page_f">
@@ -173,8 +285,12 @@
 				</div>
 				<div class="content prodt">
 					 
-					<a href="javascript:;" class="prodt_prev" id="prodt_prev"></a>
-					<a href="javascript:;" class="prodt_next" id="prodt_next"></a>
+					<a href="javascript:;" class="prodt_prev" id="prodt_prev">
+						<div class="pr_prev"></div>
+					</a>
+					<a href="javascript:;" class="prodt_next" id="prodt_next">
+						<div class="pr_next"></div>
+					</a>
 					<ul class="prodt_ul" id="prodt_ul">
 						<li class="prodt_l2">
 							<a href="http://www.xcec.com.cn/"  target="_black">
@@ -218,7 +334,7 @@
 						</li>
 						<li>
 							<a href="prodt/mls/index.html" target="_black">
-							<img src="images/itemsImg/9.jpg" alt="11" />
+								<img src="images/itemsImg/9.jpg" alt="11" />
 							</a>
 						</li>
 						<li>
@@ -252,9 +368,59 @@
 				<div class="bg">
 					<img src="images/wp1_3.jpg" alt="" />
 				</div>
-				<div class="content item">
-					<ul class="item_ul">
-						
+				<div class="content project" id="project">
+					<ul class="project_ul" id="project_ul">
+						<li>
+							<div class="project_mask">
+								<h3>项目名称：<br />
+									&nbsp;&nbsp;西安金勇儿童网站建设
+								</h3>
+								<h3>个人职责：<br />
+									&nbsp;&nbsp;静态页面及js效果部分
+								</h3>
+								<a href="http://xajyetdx.bj.bdysite.com/" class="Pro_black" target="_black">点此跳转</a>
+							</div>
+							<img src="images/project/2.jpg" alt="aa" />
+						</li>
+						<li>
+							<div class="project_mask">
+								<h3>项目名称：<br />
+									&nbsp;&nbsp;北京中科世行测控网站建设
+								</h3>
+								<h3>个人职责：<br />
+									&nbsp;&nbsp;静态页面及js效果部分
+								</h3>
+								<a href="http://www.synthflex.com/" class="Pro_black"  target="_black">点此跳转</a>
+							</div>
+							<img src="images/project/1.jpg" alt="aa" />
+							
+						</li>
+						<li>
+							<div class="project_mask">
+								<h3>项目名称：<br />
+									&nbsp;&nbsp;西安斑马汽车运输网站建设
+								</h3>
+								<h3>个人职责：<br />
+									&nbsp;&nbsp;静态页面及js效果部分
+								</h3>
+								<a href="http://www.xabmjr.com/" class="Pro_black"  target="_black">点此跳转</a>
+							</div>
+							<img src="images/project/3.jpg" alt="aa" />
+							
+						</li>
+						<li>
+							<div class="project_mask">
+								<h3>项目名称：<br />
+									&nbsp;&nbsp;华创冶金科技网站建设
+								</h3>
+								<h3>个人职责：<br />
+									&nbsp;&nbsp;成功案例栏目静态页面及js效果
+								</h3>
+								<a href="http://www.029hckj.com/" class="Pro_black"  target="_black">点此跳转</a>
+							</div>
+							<img src="images/project/4.jpg" alt="aa" />
+							
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -266,37 +432,60 @@
 				<div class="content undergo">
 					<ul class="undergo_ul" id="undergo_ul">
 						<li>
-							2014/11 -- 2015/05 <br />
-西安康明斯发动机有限公司  |  前端实习生<br />
+						<div class="undergo_color">2014/06 -- 2014/10  <br />
+西安梵高网络科技有限公司  |  前端实习生<br />
+						</div>
 工作描述：<br/>
-1、 针对公司网站页面进行日常维护及需求的改进；<br />
+1、 熟悉公司业务并参与公司对外项目的建设；<br />
 2、 针对效果图和产品的需求，给出前台技术解决方案；<br /> 
 3、 维护及优化网站前端页面执行性能和加载性能，优化前端代码规范；<br />
 4、与UI设计、前端制作及后台开发人员协作，高效优质完成产品前端开发工作；
 						</li>
 						<li>
-							2015/06 -- 2015/11 <br />
- 陕西申信科技有限公司 |  前端工程师<br />
+							<div class="undergo_color">2014/10 -- 2015/10 <br />
+ 西安梵高网络科技有限公司 |  前端工程师<br />
+ 							</div>
  工作描述：<br />
-1、 负责公司对内对外网站建设、编写静态页面；<br />
-2、 团队协作并编写简单的JavaScript效果；<br />
+1、 负责公司对内对外网站建设、静态页和JavaSript效果的编写；<br />
+2、 根据项目规模有独立完成项目的能力；<br />
 3、 维护及优化网站前端页面执行性能和加载性能，优化前端代码规范；
 						</li>
 						<li>
-							2014/11 -- 2015/05 <br />
-西安康明斯发动机有限公司  |  前端实习生<br />
+							<div class="undergo_color">2014/06 -- 2014/10  <br />
+西安梵高网络科技有限公司  |  前端实习生<br />
+							</div>
 工作描述：<br/>
-1、 针对公司网站页面进行日常维护及需求的改进；<br />
+1、 熟悉公司业务并参与公司对外项目的建设；<br />
 2、 针对效果图和产品的需求，给出前台技术解决方案；<br /> 
 3、 维护及优化网站前端页面执行性能和加载性能，优化前端代码规范；<br />
 4、与UI设计、前端制作及后台开发人员协作，高效优质完成产品前端开发工作；
 						</li>
 						<li>
-							2015/06 -- 2015/11 <br />
- 陕西申信科技有限公司 |  前端工程师<br />
+							<div class="undergo_color">2014/10 -- 2015/10 <br />
+ 西安梵高网络科技有限公司 |  前端工程师<br />
+ 							</div>
  工作描述：<br />
-1、 负责公司对内对外网站建设、编写静态页面；<br />
-2、 团队协作并编写简单的JavaScript效果；<br />
+1、 负责公司对内对外网站建设、静态页和JavaSript效果的编写；<br />
+2、 根据项目规模有独立完成项目的能力；<br />
+3、 维护及优化网站前端页面执行性能和加载性能，优化前端代码规范；
+						</li>
+						<li>
+							<div class="undergo_color">2014/06 -- 2014/10  <br />
+西安梵高网络科技有限公司  |  前端实习生<br />
+							</div>
+工作描述：<br/>
+1、 熟悉公司业务并参与公司对外项目的建设；<br />
+2、 针对效果图和产品的需求，给出前台技术解决方案；<br /> 
+3、 维护及优化网站前端页面执行性能和加载性能，优化前端代码规范；<br />
+4、与UI设计、前端制作及后台开发人员协作，高效优质完成产品前端开发工作；
+						</li>
+						<li>
+							<div class="undergo_color">2014/10 -- 2015/10 <br />
+ 西安梵高网络科技有限公司 |  前端工程师<br />
+ 							</div>
+ 工作描述：<br />
+1、 负责公司对内对外网站建设、静态页和JavaSript效果的编写；<br />
+2、 根据项目规模有独立完成项目的能力；<br />
 3、 维护及优化网站前端页面执行性能和加载性能，优化前端代码规范；
 						</li>
 					</ul>
@@ -312,23 +501,26 @@
 		</div>
 		<!--右侧功能栏-->
 		<div class="btn" id="list_fs">
-			<div class="call" id="call_c">
-				<i></i>
-				<a class="contact" href="javascript:;">131-2109-5933</a>
+			<div class="phone val1">
+				<div class="call " id="call_c">
+					<i></i>
+					<a class="contact" href="javascript:;">131-2109-5933</a>
+				</div>
+				<a class="c1" href="javascript:;"></a>
 			</div>
-			
-			<div class="call vx" id="call_vx">
-				<img src="images/vx.png" alt="" />
+			<div class="weixin val1 ">
+				<div class="call vx1" id="call_vx">
+					<img src="images/vx.png" alt="" />
+				</div>
+				<a class="c1 c2" href="javascript:;"></a>
 			</div>
-			<div class="call vx" id="call_qq">
-				<img src="images/qq.jpg" alt="" />
+			<div class="tp_qq val1">
+				<div class="call vx2 " id="call_qq">
+					<img src="images/qq.jpg" alt="" />
+				</div>
+				<a class="c1 c3" href="javascript:;"></a>
 			</div>
 			<a href="javascript:;" class="prev" id="prev"></a>
-			<a href="javascript:;" class="QQ" id="qq"></a>
-			<a href="javascript:;" class="WX" id="WX"></a>
-			<a href="javascript:;" class="phone" id="phone">
-				
-			</a>
 			<a href="javascript:;" class="next" id="next"></a>
 		</div>
 		<!--welcome遮罩-->

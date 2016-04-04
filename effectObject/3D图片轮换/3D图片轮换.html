@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link href="zns_style.css" rel="stylesheet" type="text/css" />
+<script src="doMove.js"></script>
+<style>
+	#btn1{
+		position: absolute;
+		top: 500px;
+		left: 50%;
+		margin-left: -100px;
+	}
+	#btn2{
+		position: absolute;
+		top: 500px;
+		left: 50%;
+		margin-left: 0px;
+	}
+	.znsRotatePic li img{
+		width: 100%;
+		height: 100%;
+	}
+</style>
+<script>
+window.onload=function(){
+	var oBtn1 = document.getElementById('btn1');
+	var oBtn2 = document.getElementById('btn2');
+	var oUl = document.getElementById('znsRotatePic');
+	var aLi = oUl.children;
+	var aImg = oUl.getElementsByTagName('img');
+	var aA = oUl.getElementsByTagName('a');
+	
+	aA[0].onclick=function(){
+		fnRight();
+		return false;
+	};
+	aA[2].onclick=function(){
+		fnLeft();
+		return false;
+	};
+	
+	var aPos = [];
+	for(var i=0;i<aLi.length;i++){
+		aPos[i] = {left:aLi[i].offsetLeft,top:aLi[i].offsetTop,opacity:getStyle(aImg[i],'opacity'),imgW:aImg[i].width,imgT:parseInt(getStyle(aImg[i],'top')),aEv:aA[i].onclick};
+	}
+	
+	
+	
+	oBtn1.onclick= fnRight;
+	function fnRight(){
+		aPos.push(aPos.shift());
+		for(var i=0;i<aLi.length;i++){
+			move(aLi[i],{left:aPos[i].left,top:aPos[i].top});
+			move(aImg[i],{opacity:aPos[i].opacity,width:aPos[i].imgW,top:aPos[i].imgT});
+			aA[i].onclick = aPos[i].aEv;
+		}
+	}
+	oBtn2.onclick=fnLeft;
+	function fnLeft(){
+		aPos.unshift(aPos.pop());
+		for(var i=0;i<aLi.length;i++){
+			move(aLi[i],{left:aPos[i].left,top:aPos[i].top});
+			move(aImg[i],{opacity:aPos[i].opacity,width:aPos[i].imgW,top:aPos[i].imgT});
+			aA[i].onclick = aPos[i].aEv;
+		}
+	}
+	
+};
+</script>
+</head>
+
+<body>
+<input type="button" value="往右面走" id="btn1" />
+<input type="button" value="往左面走" id="btn2" />
+<ul id="znsRotatePic">
+	<li class="pic1">
+		<a href="http://baidu.com/"><img src="images/pic1.gif" alt="pic1" class="unactive" longdesc="http://www.zns.com" width="187" /></a><!-- 208 -->
+		<span></span>
+	</li>
+	<li class="pic2">
+		<a href="http://google.com/"><img src="images/pic2.gif" alt="pic2" longdesc="http://www.zns.com" width="208" /></a>
+		<span></span>
+	</li>
+	<li class="pic3">
+		<a href="http://www.zns.com/"><img src="images/pic3.gif" alt="pic3" class="unactive" longdesc="http://www.zns.com" width="187" /></a>
+		<span></span>
+	</li>
+</ul>
+
+</body>
+</html>

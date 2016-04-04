@@ -9,95 +9,50 @@
 		
 		var oUserName = document.getElementById('username');
 		
-		var oCall_c = document.getElementById('call_c');
-		var oCall_vx = document.getElementById('call_vx');
-		
-		var oWx = document.getElementById('WX');
-		var oPhone = document.getElementById('phone');
-		
-		var oQq = document.getElementById('qq');
-		var oCall_qq = document.getElementById('call_qq');
-		
-		
 		var oList_fs = document.getElementById('list_fs');
+		var valTimer = null;
 		
-		var bOk = false;
-		var timer = null;
-		function calls_l(obj){
-			startMove(obj,{
-				'left':-200,
-				'opacity':0.7
-			},{
-				complete:function(){
-					obj.style.zIndex = '1000000';
-						
-				},
-				duration:500
+		var aVal = zgetByClass(oList_fs,'val1');
+		for(var i = 0;i<aVal.length;i++){
+			addEvent(aVal[i],'mouseenter',function(){
+				var _this = this; 
+				clearInterval(valTimer);
+				valTimer = setTimeout(function(){
+					console.log(_this)
+					startMove(_this.children[0],{
+						'left':-200,
+						'opacity':0.7
+					},{
+						complete:function(){
+							_this.children[0].style.zIndex = '1000000';
+								
+						},
+						duration:500
+					});
+				},500);
 			});
-		}
-		function calls_r(obj){
 			
-			timer = setTimeout(function(){
-				
-				startMove(obj,{
+			
+			addEvent(aVal[i].children[0],'mouseover',function(){
+				clearInterval(valTimer);
+			});
+			
+			addEvent(aVal[i],'mouseleave',function(){
+				var _this = this;
+				this.children[0].style.zIndex = '-1';
+				clearInterval(valTimer);
+				startMove(this.children[0],{
 					'left':60,
 					'opacity':0
 				},{
-					complete:function(){
-						obj.style.zIndex = '-1';
-					},
 					duration:500
 				});
-			},30);
+				
+			});
 		}
-		addEvent(oPhone,'mouseenter',function(){
-			calls_l(oCall_c);
-		});
-		addEvent(oPhone,'mouseleave',function(){
-			calls_r(oCall_c);
-		});
-		addEvent(oCall_c,'mouseenter',function(){
-			clearTimeout(timer);
-		});
-		addEvent(oCall_c,'mouseleave',function(){
-			calls_r(oCall_c);
-		});
 		
-		
-		
-		addEvent(oWx,'mouseenter',function(){
-			calls_l(oCall_vx);
-		});
-		addEvent(oWx,'mouseleave',function(){
-			calls_r(oCall_vx);
-		});
-		addEvent(oCall_vx,'mouseenter',function(){
-			clearTimeout(timer);
-		});
-		addEvent(oCall_vx,'mouseleave',function(){
-			calls_r(oCall_vx);
-		});
-		
-		
-		addEvent(oQq,'mouseenter',function(){
-			calls_l(oCall_qq);
-		});
-		addEvent(oQq,'mouseleave',function(){
-			calls_r(oCall_qq);
-		});
-		addEvent(oCall_qq,'mouseenter',function(){
-			clearTimeout(timer);
-		});
-		addEvent(oCall_qq,'mouseleave',function(){
-			calls_r(oCall_qq);
-			
-		});
-		
-		addEvent(oList_fs,'mouseleave',function(){
-			calls_r(oCall_qq);
-			calls_r(oCall_c);
-			calls_r(oCall_vx);
-		});
+		var bOk = false;
+		var timer = null;
 		setTimeout(function(){
 			move(oShade,{
 				"top":-400
@@ -133,7 +88,7 @@
 								oUserName.style.msTransform = 'rotateY(360deg)';
 								oUserName.style.mozTransform = 'rotateY(360deg)';
 								oUserName.style.transform = 'rotateY(360deg)';
-												
+						
 								oUserName.addEventListener('transitionend',function(){
 									oUserName.style.fontWeight = 'normal';
 									oUserName.style.webkitTransition = 'null';

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+</style>
+<script src="raphael.js"></script>
+<script src="tiger.js"></script>
+<script>
+window.onload=function(){
+	var oPage = new Raphael(tiger);
+	oPage.translate(200,200);
+	oPage.click(function(){
+		this.attr('fill','red');
+	});
+	
+};
+</script>
+</head>
+
+<body>
+</body>
+</html>

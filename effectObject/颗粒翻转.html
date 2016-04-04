@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+*{margin:0; padding:0;}
+.box{width:700px; height:400px; margin:100px auto; position:relative; top:0; left:0;}
+.box span{position:absolute; -webkit-transform: perspective(800px) rotateY(0deg);-webkit-transform-style:preserve-3d;}
+.box span em{width:100%; height:100%; position:absolute; top:0; left:0;}
+.box span .front{ background:url(img/1.jpg) no-repeat; -webkit-transform:translateZ(1px);}
+.box span .back{ background:url(img/2.jpg) no-repeat; -webkit-transform:translateZ(-1px) scale(-1,1);}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+	var oBox = document.querySelector('.box');
+	var R = 4;
+	var C = 7;
+	for(var i=0;i<R;i++){
+		for(var j=0;j<C;j++){
+			var oS = document.createElement('span');
+			oS.innerHTML = '<em class="front"></em><em class="back"></em>';
+			oS.style.width = oBox.offsetWidth/C+'px';
+			oS.style.height = oBox.offsetHeight/R+'px';
+			oBox.appendChild(oS);
+			oS.style.left = j*oS.offsetWidth+'px';
+			oS.style.top = i*oS.offsetHeight+'px';
+			var oF = oS.children[0];
+			var oB = oS.children[1];
+			oF.style.backgroundPosition = oB.style.backgroundPosition = -j*oS.offsetWidth+'px -'+i*oS.offsetHeight+'px';
+			oS.c = j;
+			oS.r = i;
+			
+		}
+	}
+	
+	var aS = document.querySelectorAll('.box span');
+	var iNow = 0;
+	var bOk = false;
+	oBox.onclick=function(){
+		if(bOk)return;
+		bOk = true;
+		iNow++;
+		for(var i=0;i<aS.length;i++){
+			aS[i].style.WebkitTransition = '1s all ease '+(aS[i].c+aS[i].r)*100+'ms';
+			aS[i].style.WebkitTransform = 'perspective(800px) rotateY(180deg)';
+		}
+		
+		aS[aS.length-1].addEventListener('transitionend',function(){
+			for(var i=0;i<aS.length;i++){
+				aS[i].style.WebkitTransition = 'none';
+				aS[i].style.WebkitTransform = 'perspective(800px) rotateY(0deg)';
+				var oF = aS[i].children[0];
+				var oB = aS[i].children[1];
+				oF.style.backgroundImage = 'url(img/'+(iNow%3+1)+'.jpg)';
+				oB.style.backgroundImage = 'url(img/'+((iNow+1)%3+1)+'.jpg)';
+			}
+			bOk = false;
+		},false);
+		
+	};
+},false);
+</script>
+</head>
+
+<body>
+<div class="box">
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
